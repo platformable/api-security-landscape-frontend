@@ -20,7 +20,7 @@ const Rowstarter = ({APILifecyclePlatformsDescription
         data-for="category-tooltip"
       >
         API Lifecycle <br />
-        Platform ({APILifecyclePlatform.length})
+        Platform (cantidad aqui))
       </span>
     </div>
     <div class="category-container">
