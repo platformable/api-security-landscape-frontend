@@ -1,4 +1,9 @@
-<div className="col-md-12 mb-1">
+import React from 'react';
+
+const Rowstarter = () => {
+  return (
+    <div>
+      <div className="col-md-12 mb-1">
   <div className="home-main-container ">
     <div className="bg-dark-company-color">
       <span
@@ -121,4 +126,13 @@
       </div>
     </div>
   </div>
-</div>;
+</div>
+    </div>/* ESTE DIV NO */
+  );
+}
+
+export default Rowstarter;
+
+
+
+
