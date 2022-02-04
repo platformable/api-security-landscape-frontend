@@ -1,6 +1,14 @@
 import React from 'react';
 
-const Rowstarter = () => {
+const Rowstarter = ({APILifecyclePlatformsDescription
+  ,APILifecyclePlatform,
+  handleEntity,
+  APILifecyclePlatformANDAPIManagementAPIGateway,
+  APILifecyclePlatformANDAPIOrientedITConsultingFirms,
+  APILifecyclePlatformANDAccessLevelandIdentityManagement,
+  APILifecyclePlatformANDAPITesting,
+  APILifecyclePlatformANDAPIAnalyticsMonitoring
+}) => {
   return (
     <div>
       <div className="col-md-12 mb-1">
