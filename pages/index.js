@@ -506,7 +506,7 @@ const verticalApiDescription ="Platforms that take a value proposition from one 
       {loading && <TopBarProgress />}
       <div className="">
         <Head>
-          <title>The API Landscape</title>
+          <title>The Security Landscape</title>
           <meta content="text/html; charset=UTF-8" name="Content-Type" />
           <meta name="description" content="The API Landscape" />
           <meta property="og:url" content="https://apilandscape.apiscene.io/" />
@@ -528,7 +528,7 @@ const verticalApiDescription ="Platforms that take a value proposition from one 
               {/* <Link className="navbar-brand" href="/"><img src="../homepage/logo_temporary_apilandscape.png" alt="apidays" className="home-logo align-self-start" /></Link> */}
               <div className="text-center flex-grow-1">
                 <h1 className="text-white text-center py-2 text-white fw-bold">
-                  The API Landscape
+                  The Security Landscape
                 </h1>
                 <p className="text-center sm-text text-white">
                   Last Update: {`${getDay()} ${getMonth()} ${getYear()}`}

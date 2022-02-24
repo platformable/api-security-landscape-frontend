@@ -1,17 +1,17 @@
 import React from 'react'
-import {Bar} from 'react-chartjs-2';
+import {Bar, Pie} from 'react-chartjs-2';
 
 
-export default function BarChart() {
+export default function BarChart({positionsPastYear,positionThisYearq1}) {
 
-
+console.log("positionThisYearq1",positionThisYearq1)
 
     const data = {
         labels: ['Q4 2021', 'Q1 2022'],
         datasets: [
           {
             label: '# of posts',
-            data: [parseInt("134") || 0, parseInt("289") || 0],
+            data: [parseInt(positionsPastYear) || 0, parseInt(positionThisYearq1) || 0],
             backgroundColor: [
               '#5A0C78',
               '#5A0C78',
@@ -25,7 +25,7 @@ export default function BarChart() {
       
       const options = {
         indexAxis: 'y',
-        barThickness:30,
+        barThickness:20,
           responsive: true,
           plugins: {
             legend: {

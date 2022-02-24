@@ -1026,7 +1026,9 @@ ul.timeline > .timeline-item:before {
   max-width:150px
   
   }
-
+.chart {
+  max-width:220px;
+}
 .charts-top {
 display:grid;
 grid-template-columns:3fr 1fr;
