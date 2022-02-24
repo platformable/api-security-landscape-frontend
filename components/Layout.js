@@ -8,6 +8,7 @@ export default function Layout({children}) {
         <div>
             <Header />
            {children} 
+           <br /> <br />
            <Footer/>
         </div>
         </>

@@ -216,7 +216,7 @@ const total = liveData.filter(items=>items.parentCategorySlug !=="API Standards/
 
 export async function getServerSideProps(context) {
 
-    const res = await fetch(`http://localhost:5500/companies`);
+    const res = await fetch(`https://apisecuritylandscapeserver-8unvz.ondigitalocean.app/` ||  `http://localhost:5500`);
 
     const data = await res.json();
   

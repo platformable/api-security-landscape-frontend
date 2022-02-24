@@ -625,17 +625,17 @@ const verticalApiDescription ="Platforms that take a value proposition from one 
 
           <section className="home-landscape heroBg d-none d-md-block py-1">
             <ReactTooltip
-              backgroundColor="#04a5b6"
+              backgroundColor="#000000"
               textColor="#fff"
               id="companyName-tooltip"
             />
             <ReactTooltip
-              backgroundColor="#0c4b6e"
+              backgroundColor="#000000"
               textColor="#fff"
               id="subcategory-tooltip"
             />
             <ReactTooltip
-              backgroundColor="#0c4b6e"
+              backgroundColor="#000000"
               textColor="#fff"
               id="category-tooltip"
               place="right"
@@ -1004,7 +1004,6 @@ const verticalApiDescription ="Platforms that take a value proposition from one 
 
             <div className="container-fluid">
               <div className="row">
-
               <div className="col-md-12 mb-1">
                   <div className="home-main-container ">
                     <div className="bg-dark-company-color">
@@ -1233,8 +1232,8 @@ const verticalApiDescription ="Platforms that take a value proposition from one 
 
                 <div className="col-md-12 my-1">
                   <div class="home-main-container ">
-                    <div class="ApiStandardsandProtocols" >
-                      <span className="">Media/<br/>Associations ({MediaAssociations.length})</span>
+                    <div class="bg-dark-company-color" >
+                      <span className="text-white">Media/<br/>Associations ({MediaAssociations.length})</span>
                     </div>
                     <div class="category-container ">
                       <div class="landscape-container">
@@ -1266,8 +1265,8 @@ const verticalApiDescription ="Platforms that take a value proposition from one 
 
                 <div className="col-md-12 my-1">
                   <div class="home-main-container ">
-                    <div class="ApiStandardsandProtocols" >
-                      <span className="">API Security  <br /> Support Tools ({apiSecuritySupportTools.length})</span>
+                    <div class="bg-dark-company-color" >
+                      <span className="text-white">API Security  <br /> Support Tools ({apiSecuritySupportTools.length})</span>
                     </div>
                     <div class="category-container ">
                       <div class="landscape-container">
@@ -1291,8 +1290,8 @@ const verticalApiDescription ="Platforms that take a value proposition from one 
  
                 <div className="col-md-12 my-1">
                   <div class="home-main-container ">
-                    <div class="ApiStandardsandProtocols" >
-                      <span className="">API Standards/<br/>Protocols ({ApiStandardsandProtocols.length})</span>
+                    <div class="bg-dark-company-color" >
+                      <span className="text-white">API Standards/<br/>Protocols ({ApiStandardsandProtocols.length})</span>
                     </div>
                     <div class="category-container ">
                       <div class="landscape-container">
@@ -1322,8 +1321,8 @@ const verticalApiDescription ="Platforms that take a value proposition from one 
 
                 <div className="col-md-12 my-1">
                   <div class="home-main-container ">
-                    <div class="ApiStandardsandProtocols" >
-                      <span className="">Business processes as an <br />  API/API-as a Product ({BusinessprocessesasanAPI.length})</span>
+                    <div class="bg-dark-company-color" >
+                      <span className="text-white">Business processes as an <br />  API/API-as a Product ({BusinessprocessesasanAPI.length})</span>
                     </div>
                     <div class="category-container ">
                       <div class="landscape-container">
@@ -1374,8 +1373,8 @@ const verticalApiDescription ="Platforms that take a value proposition from one 
 
                 <div className="col-md-12 my-1">
                   <div class="home-main-container ">
-                    <div class="ApiStandardsandProtocols" >
-                      <span className="">Vertical API <br />Abstractions ({apiSecuritySupportTools.length})</span>
+                    <div class="bg-dark-company-color" >
+                      <span className="text-white">Vertical API <br />Abstractions ({apiSecuritySupportTools.length})</span>
                     </div>
                     <div class="category-container ">
                       <div class="landscape-container">
@@ -1397,8 +1396,8 @@ const verticalApiDescription ="Platforms that take a value proposition from one 
 
                 <div className="col-md-12 my-1">
                   <div class="home-main-container ">
-                    <div class="ApiStandardsandProtocols" >
-                      <span className="">Backend  Building<br /> Tools ({BackendBuildingTools.length})</span>
+                    <div class="bg-dark-company-color" >
+                      <span className="text-white">Backend  Building<br /> Tools ({BackendBuildingTools.length})</span>
                     </div>
                     <div class="category-container ">
                       <div class="landscape-container">
@@ -1826,7 +1825,7 @@ const verticalApiDescription ="Platforms that take a value proposition from one 
             </div>
           </section>
 
-          <section className="methodology py-5 bg-white">
+          {/* <section className="methodology py-5 bg-white">
             <div className="container">
               <div className="methodology-title d-flex justify-content-center align-items-center my-5">
                 <img
@@ -1861,7 +1860,7 @@ const verticalApiDescription ="Platforms that take a value proposition from one 
                   </p>
                 </div>
               </div>
-              {/* row */}
+    
 
               <div className="row d-flex bg-light rounded shadow py-5 my-2 px-3">
                 <div className="col-md-3 d-flex align-items-center">
@@ -1880,7 +1879,7 @@ const verticalApiDescription ="Platforms that take a value proposition from one 
                   </p>
                 </div>
               </div>
-              {/* row */}
+   
 
               <div className="row d-flex bg-light rounded shadow py-5 my-2 px-3">
                 <div className="col-md-3 d-flex align-items-center">
@@ -1904,7 +1903,7 @@ const verticalApiDescription ="Platforms that take a value proposition from one 
                   </p>
                 </div>
               </div>
-              {/* row */}
+
 
               <div className="row d-flex bg-light rounded shadow py-5 my-2 px-3">
                 <div className="col-md-3 d-flex align-items-center">
@@ -1923,9 +1922,9 @@ const verticalApiDescription ="Platforms that take a value proposition from one 
                   </p>
                 </div>
               </div>
-              {/* row */}
+
             </div>
-          </section>
+          </section> */}
 
           <section className="something-to-change py-5 bg-white border-top">
             <div className="container">
@@ -1942,7 +1941,7 @@ const verticalApiDescription ="Platforms that take a value proposition from one 
                     />
                   </div>
                   <button
-                    className="btn-about bg-dark-orange text-white mt-3"
+                    className="btn-about bg-company-color text-white mt-3"
                     onClick={() =>
                       handleForm("https://airtable.com/shr07pWSbRnQfnZZd")
                     }
@@ -1965,7 +1964,7 @@ const verticalApiDescription ="Platforms that take a value proposition from one 
                   </div>
                   <div className="text-center d-flex flex-grow-1">
                     <button
-                      className="btn-about bg-dark-orange text-white"
+                      className="btn-about bg-company-color text-white"
                       onClick={() =>
                         handleForm(
                           "https://platformable.typeform.com/to/iqJrv9LJ"
@@ -1991,7 +1990,7 @@ const verticalApiDescription ="Platforms that take a value proposition from one 
                   </div>
                   <div className="text-center d-flex flex-grow-1">
                     <button
-                      className="btn-about bg-dark-orange text-white mt-2"
+                      className="btn-about bg-company-color text-white mt-2"
                       onClick={() =>
                         handleForm(
                           "https://platformable.typeform.com/to/hSprzih3"
