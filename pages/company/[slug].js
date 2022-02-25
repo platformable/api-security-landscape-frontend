@@ -117,7 +117,7 @@ export default function CompanyDetailsName({ data }) {
     }
     }
   const selectedCompany = data.values.filter((company) => company.name === slug) || "";
-
+console.log("selectedCompany: ",selectedCompany)
   const {
     name,
     logo,
@@ -173,6 +173,10 @@ export default function CompanyDetailsName({ data }) {
     blogQ22021,
     blogQ32021,
     blogQ42021,
+    pageAboutBanking,
+    pageAboutGovernment,
+    pageAboutSustainability,
+    pageAboutHealth,
     openSource
   } = selectedCompany[0];
 
@@ -1162,7 +1166,7 @@ export default function CompanyDetailsName({ data }) {
 
 <div className="flex flex-column">
 <div>
-<p className="text-company-color m-0 px-2 sm-text">Positions vacant Q4 2021</p>
+<p className="text-company-color m-0 px-2 sm-text">Employment Trends</p>
 
 <div className="chart p-2">
    <BarChart positionsPastYear={numberOfPositionsVacantInPastYear} positionThisYearq1={numberOfPositionsVacantIn2022}/>
@@ -1267,7 +1271,7 @@ export default function CompanyDetailsName({ data }) {
    
       <div className="profile-right-side-top-bottom content-addressing  ">
       <p className="text-company-color sm-text ms-2">Content addressing</p>
-        <div className="content-addressing-left-side px-2 pt-1 d-flex ">
+        <div className="content-addressing-left-side px-2 pt-1 d-flex flex-wrap">
         
            <div className="content-addressing-box d-flex gap-3  my-2  flex-grow-1 ">
              <div className="content-addresing-box-icon">
@@ -1275,8 +1279,8 @@ export default function CompanyDetailsName({ data }) {
              </div>
              <div className="content-addressing-url mb-4">
                <p className="text-company-color sm-text m-0">Banking/Finance</p>
-               <a href="" className="m-0 p-0 xs-text">http://www.bnkbl.com/financialservices</a>
-               <p className="text-company-color xs-text" >-</p>
+               {pageAboutBanking ?<a href="" className="m-0 p-0 sm-text">{pageAboutBanking}</a> : <Unknown/>}
+            {/*    <p className="text-company-color xs-text" >-</p> */}
              </div>
            </div> {/* content addressing box */}
 
@@ -1286,7 +1290,8 @@ export default function CompanyDetailsName({ data }) {
              </div>
              <div className="content-addressing-url">
                <p className="text-company-color sm-text m-0">Health Sector</p>
-               <p className="text-company-color xs-text" >-</p>
+               {pageAboutHealth ?<a href="" className="m-0 p-0 sm-text">{pageAboutHealth}</a> : <Unknown/>}
+               {/* <p className="text-company-color xs-text" >-</p> */}
              </div>
            </div> {/* content addressing box */}
 
@@ -1296,7 +1301,7 @@ export default function CompanyDetailsName({ data }) {
              </div>
              <div className="content-addressing-url mb-4">
                <p className="text-company-color sm-text m-0">Sustainability</p>
-               <a href="" className="m-0 p-0 xs-text">http://www.bnkbl.com/financialservices</a>
+               {pageAboutSustainability ?<a href="" className="m-0 p-0 sm-text">{pageAboutSustainability}</a> : <Unknown/>}
               <p className="text-company-color xs-text" >-</p>
              </div>
            </div> {/* content addressing box */}
@@ -1307,6 +1312,7 @@ export default function CompanyDetailsName({ data }) {
              </div>
              <div className="content-addressing-url">
                <p className="text-company-color sm-text m-0">Government</p>
+               {pageAboutGovernment ?<a href="" className="m-0 p-0 sm-text">{pageAboutGovernment}</a> : <Unknown/>}
                <p className="text-company-color xs-text" >-</p>
              </div>
            </div> {/* content addressing box */}
