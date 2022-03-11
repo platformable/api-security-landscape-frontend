@@ -1171,3 +1171,137 @@ border-radius:10px;
 .border-end-company-color {
   border-right:1px solid var(--company-color)
 }
+
+
+
+
+/* NEW LAYOUT */
+
+
+    
+.grid-container {
+  min-height:300px;
+  display:grid;
+  grid-template-columns:1fr 2fr 1fr;
+  grid-template-rows:100px;
+  gap:5px;
+}
+
+.grid-container-top {
+  display:grid;
+  grid-template-columns:1fr 2fr 1fr;
+  gap:5px;
+}
+
+.col1 {
+  
+  grid-column-start:1;
+  grid-column-end:2;
+  grid-row-start:1;
+  grid-row-end:7;
+}
+
+.col2 {
+/*   background-color:green; */
+  grid-column-start:2;
+  grid-column-end:3;
+  grid-row-start:1;
+  grid-row-end:7;
+}
+
+
+.col3 {
+/*   background-color:black; */
+  grid-column-start:3;
+  grid-column-end:4;
+  grid-row-start:1;
+  grid-row-end:7;
+}
+
+.grid-container-main-bottom {
+  min-height:100px;
+  display:grid;
+  grid-template-columns:1fr 2fr 2fr 1fr;
+  gap:2px;
+}
+
+.col5 {
+/*   background-color:yellow; */
+}
+
+.col6 {
+/*   background-color:yellow; */
+}
+
+.col7 {
+/*   background-color:purple; */
+}
+.col8 {
+/*   background-color:green; */
+}
+
+
+.security-company-name {
+    font-size:8px;
+    color:white;
+}
+
+.security-col2-main-container{
+display:grid;
+grid-template-columns: repeat(3,1fr);
+gap: 1px;   
+/* background-color: pink; */
+}
+
+.bg-apisecuritypureplay {
+  background-color:#F49228;
+
+}
+
+.bg-embeddedapisecurity {
+  border-bottom:4px solid #5A0C78;
+  background-color: #401B6E;
+}
+
+.boder-r-col2 {
+border-right:2px solid purple;
+}
+
+.bg-embedded-subcategory-title {
+  background-color:#D0C7DB;
+}
+
+.bg-adjacent-subcategory-title {
+  background-color: #D2F0F2;
+}
+
+.bg-apipureplay-subcategory-title {
+  background-color:#FDEBD3;
+}
+.bg-adjacentsecurityproviders {
+  background-color: #00A4B5;
+  border-bottom:4px solid #5A0C78;
+}
+
+.security-col2-main-container {
+  min-height: 300px;
+  }
+  
+  .security-col2-1 {
+  min-height: 370px;
+  }
+  
+  .security-col2-2 {
+  min-height: 370px;
+  }
+  
+  .security-col2-3 {
+  min-height: 370px;
+  
+  }
+
+  .security-container-bottom {
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    gap:2px;
+  }

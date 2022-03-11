@@ -1,4 +1,11 @@
 export const categories = [
+  "Adjacent security solutions",
+  "API Security Pureplay",
+  "API tooling to support security actions",
+  "Embedded API security",
+
+
+
   "API Security Pureplay",
   "API Security Support Tools",
   "API Lifecycle Platform",
@@ -10,6 +17,23 @@ export const categories = [
 ];
 
 export const subcategories = [
+  "API Testing",
+  "API Analytics/Monitoring",
+  "Access and Identity Management",
+  "API Discovery and Risk management",
+  "API Threat Management",
+  "Vulnerability management",
+  "Data",
+  "Data governance/Data management",
+  "Legal/Regulatory",
+  "Login",
+  "Identity verification/KYC",
+  "API Consulting",
+  "API Management/API Gateways",
+  "Web Application Firewalls with API security capabilities",
+  "Vulnerability identification/scanners",
+
+
   "OWASP 1",
   "OWASP 2",
   "OWASP 3",
@@ -40,77 +64,110 @@ export const subcategories = [
 
 export const categoriesWithSubcategories = [
   {
-    "name": "API Security Pureplay",
-    "subcategories": [  
-      "OWASP 1",
-      "OWASP 2",
-      "OWASP 3",
-      "OWASP 4",
-      "OWASP 5",
-      "OWASP 6",
-      "OWASP 7",
-      "OWASP 8",
-      "OWASP 9",
-      "OWASP 10"],
+    name: "Adjacent security solutions",
+    subcategories: [
+      "API Testing",
+      "API Analytics/Monitoring",
+      "Access and Identity Management",
+    ],
+  },
+
+  {
+    name: "API Security Pureplay",
+    subcategories: [
+      "API Discovery and Risk management",
+      "API Threat Management",
+      "Vulnerability management",
+    ],
   },
   {
-    "name":"API Security Support Tools",
-    "subcategories":[  
-    "Vulnerability scanners",]
+    name: "API tooling to support security actions",
+    subcategories: [
+      "Data",
+      "Data governance/Data management",
+      "Legal/Regulatory",
+      "Login",
+      "Identity verification/KYC",
+      "API Consulting",
+    ],
   },
   {
-    "name":"API Lifecycle Platform",
-    "subcategories":[
+    name: "Embedded API security",
+    subcategories: [
+      "API Management/API Gateways",
+      "Web Application Firewalls with API security capabilities",
+      "Vulnerability identification/scanners",
+    ],
+  },
+
+
+  
+
+  {
+    name: "API Security Support Tools",
+    subcategories: ["Vulnerability scanners"],
+  },
+  {
+    name: "API Lifecycle Platform",
+    subcategories: [
       "API Testing",
       "API Management/API Gateway",
       "Access and Identity Management",
       "API Analytics/Monitoring",
-      "API Consulting",]
+      "API Consulting",
+    ],
   },
   {
-    "name":"API Standards/Protocols",
-    "subcategories":[ 
-      "API Standards",
-      "API Protocols",
-    ]
+    name: "API Standards/Protocols",
+    subcategories: ["API Standards", "API Protocols"],
   },
   {
-    "name":"Business processes as an API/API-as a Product",
-    "subcategories":[ 
+    name: "Business processes as an API/API-as a Product",
+    subcategories: [
       "Identity verification/KYC",
       "Data governance/Data management",
       "Legal/Regulatory",
       "Data",
-    ]
+    ],
   },
   {
-    "name":"Vertical API Abstractions",
-    "subcategories":[  
-    "Login"]
+    name: "Vertical API Abstractions",
+    subcategories: ["Login"],
   },
   {
-    "name":"Media/Associations",
-    "subcategories":[
-    "Media",
-    "Associations"]
+    name: "Media/Associations",
+    subcategories: ["Media", "Associations"],
   },
   {
-    "name":"Backend Building Tools",
-    "subcategories":[  
-    "API Deployment/Back-end Building"]
+    name: "Backend Building Tools",
+    subcategories: ["API Deployment/Back-end Building"],
   },
-
-
-]
+];
 
 export const subcategoriesDescriptions = {
-  "Access and Identity Management":[{"description":"Ensures the correct people and job roles in an organization can access the necessary tools needed to do their jobs"}],
+  "API Testing":[{"description":"Software testing to ensure APIs meet functionality, reliability, performance, and security requirements"}],
   "API Analytics/Monitoring":[{"description":"Observation of systems and examining data to draw conclusions about their information"}],
+  "Access and Identity Management":[{"description":"Ensures the correct people and job roles in an organization can access the necessary tools needed to do their jobs"}],
+  "API Discovery and Risk management":[{"description":"Products and services designed to address API security risks and vulnerabilities"}],
+  "API Threat Management":[{"description":"Products and services designed to address API security risks and vulnerabilities"}],
+  "Vulnerability management":[{"description":"Products and services designed to address API security risks and vulnerabilities"}],
+  "Data":[{"description":"API providers that enable data to be sold as a product "}],
+  "Data governance/Data management":[{"description":"Cloud-based software working with data, such as analyzing data with business intelligence or managing data in data warehouse"}],
+  "Legal/Regulatory":[{"description":"API products, services, and tolling that integrate legal and business decisions into API architectures and workflows "}],
+  "Login":[{"description":"Integration of an API allowing a user to gain access to a computer system via authentication"}],
+  "Identity verification/KYC":[{"description":"Know Your Client integration allowing for businesses to perform due diligence within a business relationship "}],
+  "API Consulting":[{"description":"Advisory services educating clients on how best to use API-focused information technology to achieve their business objectives"}],
+  "API Management/API Gateway":[{"description":"Management is the process of analyzing, controlling, and distributing APIs. The gateway sits between back-end services and the client, accepting all API calls "}],
+  "Web Application Firewalls with API security capabilities":[{"description":"Products and services designed to address API security risks and vulnerabilities"}],
+  "Vulnerability identification/scanners":[{"description":"Open source projects and other tools to enhance security ops"}],
+  
+  
+
+
+
+
    "API Design/Documentation Platforms":[{"description":"Platforms aiding in the creation of standards enabling developers to create uniform software applications"}],
    "API Developer Portals":[{"description":"The interface containing a developer's API documentation and digital tools"}],
-   "API Management/API Gateway":[{"description":"Management is the process of analyzing, controlling, and distributing APIs. The gateway sits between back-end services and the client, accepting all API calls "}],
-   "API Consulting":[{"description":"Advisory services educating clients on how best to use API-focused information technology to achieve their business objectives"}],
-   "API Testing":[{"description":"Software testing to ensure APIs meet functionality, reliability, performance, and security requirements"}],
    "API Security":[{"description":"Products and services designed to address API security risks and vulnerabilities"}],
    "Streaming/Event Architecture":[{"description":"Integration of components to read data in real-time to deliver up-to-date results"}],
    "IoT Platforms/Networks/Devices":[{"description":"Integrates with technology allowing for the management, provision, and automation of connected devices within the Internet of Things"}],
@@ -119,14 +176,10 @@ export const subcategoriesDescriptions = {
    "Accounting":[{"description":"Integrating the measurement, processing, and communication of financial information and non-financial information on entities such as businesses and corporations"}],
    "AI/ML":[{"description":"Artificial intelligence API. Integrates computer systems performing tasks usually performed by a human"}],
    "Audio/Visual":[{"description":"A digital recording"}],
-   "Legal/Regulatory":[{"description":"API products, services, and tolling that integrate legal and business decisions into API architectures and workflows "}],
    "Time/Calendar":[{"description":"Products and tools that enable time and date integration via API, and that enable APIs for calendar integrations   "}],
-   "Data governance/Data management":[{"description":"Cloud-based software working with data, such as analyzing data with business intelligence or managing data in data warehouse"}],
    "E-commerce":[{"description":"Integration allowing the buying and selling of goods via the internet"}],
-   "Data":[{"description":"API providers that enable data to be sold as a product "}],
    "Email/Messaging/Communications Platforms as a Service":[{"description":"Integrates Communications Platforms as a Service, cloud-based model to add video, voice, and messaging to existing business software via APIs "}],
    "Forms":[{"description":"Interactive web page allowing for user input"}],
-   "Identity verification/KYC":[{"description":"Know Your Client integration allowing for businesses to perform due diligence within a business relationship "}],
    "Human Resources":[{"description":"Integrates platforms focused on the people who comprise a workforce, often overseeing employment and labor laws"}],
    "Human-as-a-service":[{"description":"Integrates 'gig economy' services where people perform tasks given to them by an online platform"}],
    "Payments":[{"description":"Integrating an API allowing e-commerce businesses to manage their payments"}],
@@ -144,7 +197,6 @@ export const subcategoriesDescriptions = {
     "Cloud Storage":[{"description":"Integrates data storage saved in logical pools known as 'the cloud'"}],
     "Delivery/Transport/Logistics":[{"description":"Shipping functionality integration"}],
     "Healthcare":[{"description":"Medical care given to an individual or community"}],
-    "Login":[{"description":"Integration of an API allowing a user to gain access to a computer system via authentication"}],
     "Marketing/Analytics":[{"description":"Study and management of metrics data to determine ROI of marking, such as calls to action, blogs, and channel performance"}],
     "Finance":[{"description":"Products and tooling that enables finance services to be integrated via API"}],
     "Smart Home/Facilities":[{"description":"A home equipped with heating, lighting, and other electronic devices remotely controlled via mobile or computer"}],
@@ -161,7 +213,6 @@ export const subcategoriesDescriptions = {
     "OWASP 9":[{"description":"Products and services designed to address API security risks and vulnerabilities"}],
     "OWASP 10":[{"description":"Products and services designed to address API security risks and vulnerabilities"}],
     "Vulnerability scanners":[{"description":"Open soyrce projects and other tools to enhance security ops"}],
-
   }
 
 

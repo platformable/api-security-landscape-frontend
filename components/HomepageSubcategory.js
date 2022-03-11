@@ -21,7 +21,7 @@ if(url.includes("https://drive.google.com")){
 
 
 function getSubcategoryDescription (obj,subcategoryName){
-  const search = obj[subcategoryName][0].description
+  const search = obj[subcategoryName][0]?.description
   return search
 }
 
@@ -30,7 +30,7 @@ function getSubcategoryDescription (obj,subcategoryName){
 /* console.log(Object.keys(subcategoriesDescriptions)); */
   return (
     <div className="">
-      <h6 className="text-center sm-text pt-1" data-tip={getSubcategoryDescription(subcategoriesDescriptions,subcategoryName)} data-for="subcategory-tooltip">{subcategoryName} ({filteredCategory.length})</h6>
+      {/* <h6 className="text-center sm-text pt-1" data-tip={getSubcategoryDescription(subcategoriesDescriptions,subcategoryName)} data-for="subcategory-tooltip">{subcategoryName} ({filteredCategory.length})</h6> */}
 
       <div className="">
       <div className="homeCards px-2">
