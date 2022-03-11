@@ -1183,7 +1183,7 @@ border-radius:10px;
   min-height:300px;
   display:grid;
   grid-template-columns:1fr 2fr 1fr;
-  grid-template-rows:100px;
+  
   gap:5px;
 }
 
@@ -1191,17 +1191,21 @@ border-radius:10px;
   display:grid;
   grid-template-columns:1fr 2fr 1fr;
   gap:5px;
+  position:relative;
+  top:-26px;
 }
 
 .col1 {
   
   grid-column-start:1;
   grid-column-end:2;
-  grid-row-start:1;
+  grid-row-start:2;
   grid-row-end:7;
 }
 
 .col2 {
+  position: relative;
+  top:-26px;
 /*   background-color:green; */
   grid-column-start:2;
   grid-column-end:3;
@@ -1214,7 +1218,7 @@ border-radius:10px;
 /*   background-color:black; */
   grid-column-start:3;
   grid-column-end:4;
-  grid-row-start:1;
+  grid-row-start:2;
   grid-row-end:7;
 }
 
@@ -1268,15 +1272,23 @@ border-right:2px solid purple;
 }
 
 .bg-embedded-subcategory-title {
+  border-top:1px solid #5A0C78;
   background-color:#D0C7DB;
 }
 
 .bg-adjacent-subcategory-title {
+  border-top:1px solid #5A0C78;
   background-color: #D2F0F2;
+}
+
+.bg-api-tooling-subcat-title {
+background-color:#e3e3e3;
+border-top:1px solid #5A0C78;
 }
 
 .bg-apipureplay-subcategory-title {
   background-color:#FDEBD3;
+  border-bottom:2px solid #5A0C78
 }
 .bg-adjacentsecurityproviders {
   background-color: #00A4B5;

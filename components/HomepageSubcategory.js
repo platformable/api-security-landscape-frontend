@@ -45,7 +45,7 @@ function getSubcategoryDescription (obj,subcategoryName){
                   key={index}
                   onClick={()=> handleCompany(row)}
                 >
-                  <div   data-bs-toggle="modal" data-bs-target="#exampleModal" data-tip={row.name} data-for="companyName-tooltip" className={router.pathname!=="/zoom" ? "landscape-img border " : "homepage-landscape-img border "}>
+                  <div   data-bs-toggle="modal" data-bs-target="#exampleModal" data-tip={row.name} data-for="companyName-tooltip" className={router.pathname!=="/zoom" ? "landscape-img border bg-white" : "homepage-landscape-img border "}>
                    {row.logo === "" || null ? <img src={`../apidaysReplacementLogo.png`} alt=""  className=""/> : <img srcset={`${handleImages(row.logo)} 2x`} alt="" className="" /> }
                   </div>
                   {router.pathname!=="/zoom"? <p className="index-company-text text-center mt-1">{row.name.substr(0,10)}</p> : ""} 

@@ -355,7 +355,7 @@ export default function Homepage({ data }) {
         </Head>
 
         <main>
-          <section className="intro-text py-3">
+          <section className="intro-text py-5">
             <div className="container hero  d-flex justify-content-center  align-items-center">
               {/* <Link className="navbar-brand" href="/"><img src="../homepage/logo_temporary_apilandscape.png" alt="apidays" className="home-logo align-self-start" /></Link> */}
               <div className="text-center flex-grow-1">
@@ -489,7 +489,7 @@ export default function Homepage({ data }) {
                     <div className="col33"></div>
                   </div>
                   <div class="grid-container">
-                    <div class="col1 bg-white" id="">
+                    <div class="col1 bg-embedded-subcategory-title" id="">
                     <div >
                       <div class="secturity-category-title">
                         <h6 class="text-center bg-embeddedapisecurity py-2 text-white my-0 ">
@@ -513,19 +513,10 @@ export default function Homepage({ data }) {
                     </div>
 
                     <div class="col2 " id="">
-                      {/*     <div class="secturity-category-title">
-                        <h6 class="text-center bg-apisecuritypureplay py-2  mb-1 text-black">
-                          API Security Pureplay
-                        </h6>
-                      </div> */}
-                      <div class="security-col2-main-container bg-white ">
+                      <div class="security-col2-main-container bg-apipureplay-subcategory-title ">
                         <div class="security-col2-1   boder-r-col2">
-                          {/*    <div class="secturity-category-title">
-                        <h6 class="text-center bg-apisecuritypureplay py-2  mb-1 text-black">
-                          API Security Pureplay
-                        </h6>
-                      </div> */}
-                          <h6 class="text-center sm-text py-2 bg-apipureplay-subcategory-title my-0">
+        
+                          <h6 class="text-center sm-text py-2 bg-apipureplay-subcategory-title  my-0">
                             API Discovery and Risk management
                           </h6>
                           <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-0 p-1">
@@ -540,7 +531,7 @@ export default function Homepage({ data }) {
                         </div>
 
                         <div class="security-col2-2 boder-r-col2">
-                          <h6 class="text-center sm-text py-2 bg-apipureplay-subcategory-title my-0">
+                          <h6 class="text-center sm-text py-2  bg-apipureplay-subcategory-title my-0">
                             API Threat Management
                           </h6>
 
@@ -553,7 +544,7 @@ export default function Homepage({ data }) {
                           </div>
                         </div>
                         <div class="security-col2-3 ">
-                          <h6 class="text-center py-2 bg-apipureplay-subcategory-title my-0 sm-text">
+                          <h6 class="text-center py-2  bg-apipureplay-subcategory-title my-0 sm-text">
                             Vulnerability management
                           </h6>
 
@@ -570,7 +561,7 @@ export default function Homepage({ data }) {
                       </div>
                     </div>
 
-                    <div class="col3 bg-white" id="">
+                    <div class="col3 bg-adjacent-subcategory-title" id="">
                       <div class="secturity-category-title">
                         <h6 class="text-center bg-adjacentsecurityproviders py-2 my-0">
                           Adjacent security solutions
@@ -592,7 +583,7 @@ export default function Homepage({ data }) {
                   </div>
 
                   <div class="grid-container-main-bottom my-0">
-                    <div class="col5 bg-white">
+                    <div class="col5 bg-embedded-subcategory-title">
                     <h6 class="text-center py-2 bg-embedded-subcategory-title text-black my-0 sm-text">
                     Web Application Firewalls with API security capabilities
                         </h6>
@@ -605,7 +596,7 @@ export default function Homepage({ data }) {
                           />
                         </div>
                     </div>
-                    <div class="col6 bg-white">
+                    <div class="col6 bg-embedded-subcategory-title">
                     <h6 class="text-center py-2 bg-embedded-subcategory-title text-black my-0 sm-text">
                     Vulnerability identification/scanners
                         </h6>
@@ -618,7 +609,7 @@ export default function Homepage({ data }) {
                           />
                         </div>
                     </div>
-                    <div class="col7 bg-white">
+                    <div class="col7 bg-adjacent-subcategory-title">
                     <h6 class="text-center py-2 bg-adjacent-subcategory-title text-black my-0 sm-text">
                     API Analytics/Monitoring
                         </h6>
@@ -631,7 +622,7 @@ export default function Homepage({ data }) {
                           />
                         </div>
                     </div>
-                    <div class="col8 bg-white">
+                    <div class="col8 bg-adjacent-subcategory-title">
                     <h6 class="text-center py-2 bg-adjacent-subcategory-title text-black my-0 sm-text">
                     Access and Identity Management
                         </h6>
@@ -661,8 +652,8 @@ export default function Homepage({ data }) {
 
                   <div className="security-container-bottom">
                     
-                    <div className="security-bottom bg-white">
-                          <h6 class="text-center py-2 bg-adjacent-subcategory-title text-black my-0 sm-text">
+                    <div className="security-bottom bg-api-tooling-subcat-title">
+                          <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
                     Data
                         </h6>
                         <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
@@ -674,8 +665,8 @@ export default function Homepage({ data }) {
                           />
                         </div>
                     </div>
-                    <div className="security-bottom bg-white">
-                    <h6 class="text-center py-2 bg-adjacent-subcategory-title text-black my-0 sm-text">
+                    <div className="security-bottom bg-api-tooling-subcat-title">
+                    <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
                     Data governance/Data management
                         </h6>
                         <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
@@ -687,8 +678,8 @@ export default function Homepage({ data }) {
                           />
                         </div>
                     </div>
-                    <div className="security-bottom bg-white">
-                    <h6 class="text-center py-2 bg-adjacent-subcategory-title text-black my-0 sm-text">
+                    <div className="security-bottom bg-api-tooling-subcat-title">
+                    <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
                     Legal
                         </h6>
                         <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
@@ -700,8 +691,8 @@ export default function Homepage({ data }) {
                           />
                         </div>
                       </div>
-                    <div className="security-bottom bg-white">
-                    <h6 class="text-center py-2 bg-adjacent-subcategory-title text-black my-0 sm-text">
+                    <div className="security-bottom bg-api-tooling-subcat-title">
+                    <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
                     Identity verification/KYC
                         </h6>
                         <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
@@ -713,8 +704,8 @@ export default function Homepage({ data }) {
                           />
                         </div>
                       </div>
-                    <div className="security-bottom bg-white">
-                    <h6 class="text-center py-2 bg-adjacent-subcategory-title text-black my-0 sm-text">
+                    <div className="security-bottom bg-api-tooling-subcat-title">
+                    <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
                     API Consulting
                         </h6>
                         <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
