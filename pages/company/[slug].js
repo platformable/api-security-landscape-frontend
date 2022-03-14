@@ -279,67 +279,11 @@ console.log("selectedCompany: ",selectedCompany)
 
                 {subcategory?.split(",").map((subcat,index)=>{
   
-  return <span className={`text-center badge mb-1 mt-1 text-black d-block
-  ${subcat.includes("API Management/API Gateway")&& "bg-light-company-color text-white"}
-  ${subcat.includes("API Consulting")&& "bg-light-company-color text-white"}
-  ${subcat.includes("API Analytics/Monitoring")&& "bg-light-company-color text-white"}
-  ${subcat.includes("API Design/Documentation Platforms")&& "bg-light-company-color text-white"}
-  ${subcat.includes("API Developer Portals")&& "bg-light-company-color text-white"}
-  ${subcat.includes("API Oriented IT Consulting Firms")&& "bg-light-company-color text-white"}
-  ${subcat.includes("API Testing")&& "bg-light-company-color text-white"}
-  ${subcat.includes("API Security")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Streaming/Event Architecture")&& "bg-light-company-color text-white"}
-  ${subcat.includes("IoT Platforms/Networks/Devices")&& "bg-light-company-color text-white"}
-
-  ${subcat.includes("API Protocols")&& "bg-light-company-color text-white"}
-  ${subcat.includes("API Standards")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Media")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Associations")&& "bg-light-company-color text-white"}
-
-  ${subcat.includes( "Accounting")&& "bg-light-company-color text-white"}
-  ${subcat.includes("AI/ML")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Audio/Visual")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Legal/Regulatory")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Time/Calendar")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Data governance/Data management")&& "bg-light-company-color text-white"}
-  ${subcat.includes("E-commerce")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Data")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Email/Messaging/Communications Platforms as a Service")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Forms")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Identity verification/KYC")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Human Resources")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Human-as-a-service")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Payments")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Search")&& "bg-light-company-color text-white"}
-
-  ${subcat.includes("API Deployment/Back-end Building")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Banking/Finance/Insurance Backends")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Blockchain")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Headless CMS")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Infrastructure/Cloud/Serverless APIs")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Mobile Backend as a Service")&& "bg-light-company-color text-white"}
-
-  ${subcat.includes("API Aggregators (General)")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Automation/Orchestration")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Database-as-a-service")&& "bg-light-company-color text-white"}
-  ${subcat.includes("API Aggregators (Finance)")&& "bg-light-company-color text-white"}
-
-  ${subcat.includes("Cloud Storage")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Delivery/Transport/Logistics")&& "bg-light-company-color v"}
-
-  ${subcat.includes("Healthcare")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Login")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Marketing/Analytics")&& "bg-light-company-color v"}
-  ${subcat.includes("Finance")&& "bg-light-company-color text-white"}
-  ${subcat.includes("Smart Home/Smart Facilities")&& "bg-light-company-color text-white"}
-
-
- 
-  `}>{subcat}</span>
-
-  
-  
-})}  
+              return <span className={`test text-center badge mb-1 mt-1 text-black d-block
+              ${subcat==="API Management/API Gateways" && "bg-danger"}
+              ${subcat.includes("Web Application Firewalls with API security capabilities")&& "bg-embedded-subcategory-label"}
+              ${subcat==="Vulnerability identification/scanners" && "bg-danger"}`}>{subcat}</span>
+              })}  
 
         <div className="open-source d-flex justify-content-center">
 
@@ -551,7 +495,7 @@ console.log("selectedCompany: ",selectedCompany)
 
 
           <div className="row">
-            <div className="col-md-4 text-center border-top p-2 border-end-company-color">
+            <div className="col-md-4 text-center border-top p-2 border-end-company-color border-top-company-color ">
             <p className="text-company-color m-0 px-2 sm-text ">Headcount</p>
                  {headcount?<h6 className="fw-bold my-2 px-2">{headcount}</h6>:<h6 className="fw-bold my-2 px-2"> - </h6>}
                  <img src="../../apilandscape_headcount_80x50_companies card.png" alt="" className="xd-icon my-1 px-2" />
@@ -916,7 +860,7 @@ console.log("selectedCompany: ",selectedCompany)
 
 
 
-      <div className="container my-5 d-none d-md-block">
+      <div className="container mt-5 d-none d-md-block">
        <div className="company-profile-container bg-company-color">
          <div className="company-profile-left-column bg-white   px-5 py-1">
           
@@ -937,7 +881,12 @@ console.log("selectedCompany: ",selectedCompany)
 
             {newParentCategorySlug?.map((category,index)=>{
 
-                  return (<span className={`text-center badge my-1 text-black sm-text  d-block bg-dark-main-color text-white`}>{category}</span>)
+                  return (<span className={`text-center badge my-1 text-black sm-text  d-block 
+                  ${category==="Embedded API security" && "bg-embeddedapisecurity-label  text-white"}
+                  ${category==="API Security Pureplay" && "bg-apisecuritypureplay-label"}
+                  ${category==="Adjacent security solutions" && "bg-adjacentsecurityproviders-label"}
+                  ${category==="API tooling to support security actions" && "bg-black text-white"}
+                  `}>{category}</span>)
                 })}
 
                 <div className="text-center">
@@ -946,13 +895,31 @@ console.log("selectedCompany: ",selectedCompany)
                 </svg>
                 </div>
 
- 
 
-            {subcategory?.split(",").map((subcat,index)=>{
+
+            
+                {subcategory?.split(",").map((subcat,index)=>{
   
-                          return <span className={`text-center badge mb-1 mt-1 text-black d-block bg-light-company-color`}>{subcat}</span>
-                          
-                        })} 
+              return <span className={`text-center badge mb-1 mt-1 text-black d-block
+              ${subcat==="API Management/API Gateways" && "bg-embedded-subcategory-label"}
+              ${subcat==="Web Application Firewalls with API security capabilities" && "bg-embedded-subcategory-label"}
+              ${subcat==="Vulnerability identification/scanners" && "bg-embedded-subcategory-label"}
+
+              ${subcat==="API Discovery and Risk management" && "bg-apipureplay-subcategory-label"}
+              ${subcat==="API Threat Management" && "bg-apipureplay-subcategory-label"}
+              ${subcat==="Vulnerability management" && "bg-apipureplay-subcategory-label"}
+
+              ${subcat==="API Testing" && "bg-adjacent-subcategory-label"}
+              ${subcat==="API Analytics/Monitoring" && "bg-adjacent-subcategory-label"}
+              ${subcat==="Access and Identity Management" && "bg-adjacent-subcategory-label"}
+
+              ${subcat==="Data" && "bg-api-tooling-subcat-label"}
+              ${subcat==="Data governance/Data management" && "bg-api-tooling-subcat-label"}
+              ${subcat==="Legal" && "bg-api-tooling-subcat-label"}
+              ${subcat==="Identity verification/KYC" && "bg-api-tooling-subcat-label"}
+              ${subcat==="API Consulting" && "bg-api-tooling-subcat-label"}
+              `}>{subcat}</span>
+              })}
 
             <div className="open-source d-flex justify-content-center">
 
@@ -1059,7 +1026,7 @@ console.log("selectedCompany: ",selectedCompany)
 
 
 
-          <section className="company-profile-right-side-section5 mb-1 d-flex bg-white ">
+          <section className="company-profile-right-side-section5  d-flex bg-white ">
 
 <div className="company-profile-right-side-section5-right d-flex">
 
@@ -1127,7 +1094,7 @@ console.log("selectedCompany: ",selectedCompany)
 
           <section className="company-profile-right-side-section2 bg-white mb-1 d-flex flex-wrap">
 
-<div className="company-profile-right-side-section2-left headcount d-flex flex-column align-items-center border-end-company-color flex-grow-1">
+<div className="company-profile-right-side-section2-left headcount d-flex flex-column align-items-center border-top-company-color  border-end-company-color flex-grow-1">
 
    <p className="text-company-color m-0 px-2 sm-text ">Headcount</p>
     {headcount?<h6 className="fw-bold my-2 px-2">{headcount}</h6>:<h6 className="fw-bold my-2 px-2"> - </h6>}
@@ -1135,7 +1102,7 @@ console.log("selectedCompany: ",selectedCompany)
 
 </div> {/* company-profile-right-side-section2 left */}
 
-<div className="company-profile-right-side-section2-center diversity  d-flex border-end-company-color">
+<div className="company-profile-right-side-section2-center diversity  d-flex border-end-company-color border-top-company-color ">
   <div className="d-flex flex-column align-items-center flex-grow-1">
 
   <p className="text-company-color m-0 px-2 sm-text">Diversity Score</p>
@@ -1144,7 +1111,7 @@ console.log("selectedCompany: ",selectedCompany)
 
  </div>
 
- <div className="d-flex flex-column align-items-center flex-grow-1">
+ <div className="d-flex flex-column align-items-center flex-grow-1 ">
 
  <p className="text-company-color m-0 px-2 sm-text">Women in management?</p>
  {womanInManagement? <h6 className="fw-bold my-2 px-2">{womanInManagement}</h6>:<Unknown/>}
@@ -1164,9 +1131,9 @@ console.log("selectedCompany: ",selectedCompany)
 </div> {/* company-profile-right-side-section2-center */}
 
 
-<div className="flex flex-column">
+<div className="flex flex-column border-top-company-color ">
 <div>
-<p className="text-company-color m-0 px-2 sm-text">Employment Trends</p>
+<p className="text-company-color m-0 px-2 sm-text">Number of vacancies</p>
 
 <div className="chart p-2">
    <BarChart positionsPastYear={numberOfPositionsVacantInPastYear} positionThisYearq1={numberOfPositionsVacantIn2022}/>

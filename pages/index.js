@@ -98,8 +98,8 @@ export default function Homepage({ data }) {
 
   TopBarProgress.config({
     barColors: {
-      0: "#fdb43e",
-      "1.0": "#fdb43e",
+      0: "#000000",
+      "1.0": "#000000",
     },
     shadowBlur: 5,
   });
@@ -360,36 +360,35 @@ export default function Homepage({ data }) {
               {/* <Link className="navbar-brand" href="/"><img src="../homepage/logo_temporary_apilandscape.png" alt="apidays" className="home-logo align-self-start" /></Link> */}
               <div className="text-center flex-grow-1">
                 <h1 className="text-white text-center py-2 text-white fw-bold">
-                  The Security Landscape
+                  API Secure Landscape
                 </h1>
                 <p className="text-center sm-text text-white">
                   Last Update: {`${getDay()} ${getMonth()} ${getYear()}`}
                 </p>
                 <h4 className="text-white text-center py-2 text-white">
-                  A comprehensive view of all stakeholders creating the
-                  programmable economy
+                A comprehensive view of all API security tooling and adjacent services
                 </h4>
-                <button
+               {/*  <button
                   className="btn btn-dark-gray me-1 text-white mb-1"
                   onClick={() =>
                     handleForm("https://airtable.com/shr07pWSbRnQfnZZd")
                   }
                 >
                   Add your API Tool
-                </button>
+                </button> */}
                 <button
-                  className="btn btn-light-gray  m-0 text-company-color mb-1"
+                  className="btn btn-light-gray  me-2 text-company-color "
                   onClick={() => handleLinks("companies")}
                 >
                   Search
                 </button>
-                <a
+              {/*   <a
                   className="btn btn-dark-gray me-1 text-white"
                   href="../apilandscape.png"
                   download="apilandscape"
                 >
                   Download the map
-                </a>
+                </a> */}
                 <button
                   className="btn btn-light-gray   text-company-color "
                   onClick={() => handleLinks("zoom")}
@@ -397,13 +396,15 @@ export default function Homepage({ data }) {
                   Zoom
                 </button>
                 {/* <a className="btn btn-dark-gray  text-white" href="https://drive.google.com/u/0/uc?id=1J2DdAB54QU6QuPoACqQoNv4nImFjyAdx&export=download"  download="stateofthemarket2022">Report</a> */}
-                <a
+                {/* <a
                   className="btn btn-dark-gray  text-white"
                   href="https://apidays.typeform.com/to/YMTfJ3"
                   target="_blank"
                 >
                   Report
-                </a>
+                </a> */}
+
+                
                 {/*      <div className="row">
             <div className="col-md-4"> </div>
               <div className="col-md-4">
@@ -455,7 +456,7 @@ export default function Homepage({ data }) {
             </div>
           </section>
 
-          <section className="home-landscape heroBg d-none d-md-block py-1">
+          <section className="home-landscape heroBg  py-1">
             <ReactTooltip
               backgroundColor="#000000"
               textColor="#fff"
@@ -474,13 +475,153 @@ export default function Homepage({ data }) {
               className="categoryToolTip"
             />
 
-            <div className="container-fluid">
+            {/* MOBILE */}
+
+            <div className="container d-block d-md-none">
+              <div className="">
+
+              <div className="col ">
+                  <div class="secturity-category-title bg-apipureplay-subcategory-title">
+                    <h6 class="text-center bg-apisecuritypureplay py-2  mb-1 text-black">
+                      API Security Pureplay
+                    </h6>
+                    <h6 class="text-center sm-text py-2  my-0 ">
+                      API Discovery and Risk management
+                    </h6>
+                    <div class="security-subcategory-container d-flex bg-apipureplay-subcategory-title-border-bottom flex-wrap justify-content-between my-0 p-1">
+                      {data <= 0 && <Loader />}
+
+                      <HomepageSubcategory
+                        subcategoryName="API Discovery and Risk management"
+                        handleCompany={handleEntity}
+                        filteredCategory={apiSecurityPureplayANDDiscovery}
+                      />
+                    </div>
+                    <h6 class="text-center sm-text py-2  bg-apipureplay-subcategory-title  my-0">
+                      API Threat Management
+                    </h6>
+
+                    <div class="security-subcategory-container  d-flex flex-wrap justify-content-between my-1 p-1 bg-apipureplay-subcategory-title-border-bottom">
+                      <HomepageSubcategory
+                        subcategoryName="API Threat Management"
+                        handleCompany={handleEntity}
+                        filteredCategory={apiSecurityPureplayANDApiThreat}
+                      />
+                    </div>
+
+                    <h6 class="text-center py-2   my-0 sm-text">
+                      Vulnerability management
+                    </h6>
+
+                    <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1 ">
+                      <HomepageSubcategory
+                        subcategoryName="Vulnerability management"
+                        handleCompany={handleEntity}
+                        filteredCategory={apiSecurityPureplayANDVulnerability}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="col bg-embedded-subcategory-title">
+                  <h6 class="text-center bg-embeddedapisecurity py-2 text-white my-0 ">
+                    Embedded API security
+                  </h6>
+                  <h6 class="text-center py-2 bg-embedded-subcategory-title text-black my-0 sm-text">
+                    API Management/API Gateways
+                  </h6>
+                  <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
+                    {data <= 0 && <Loader />}
+                    <HomepageSubcategory
+                      subcategoryName="API Management/API Gateway"
+                      handleCompany={handleEntity}
+                      filteredCategory={EmbeddedAPISecurityANDManagement}
+                    />
+                  </div>
+
+                  <h6 class="text-center py-2 bg-embedded-subcategory-title text-black my-0 sm-text">
+                    Web Application Firewalls <br /> with API security
+                    capabilities
+                  </h6>
+                  <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
+                    {data <= 0 && <Loader />}
+                    <HomepageSubcategory
+                      subcategoryName="Web Application Firewalls with API security capabilities"
+                      handleCompany={handleEntity}
+                      filteredCategory={EmbeddedAPISecurityANDWeb}
+                    />
+                  </div>
+
+                  <h6 class="text-center py-2 bg-embedded-subcategory-title text-black my-0 sm-text">
+                    Vulnerability identification/scanners
+                  </h6>
+                  <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
+                    {data <= 0 && <Loader />}
+                    <HomepageSubcategory
+                      subcategoryName="Web Application Firewalls with API security capabilities"
+                      handleCompany={handleEntity}
+                      filteredCategory={EmbeddedAPISecurityANDVulnerability}
+                    />
+                  </div>
+                </div>
+
+               
+
+                <div className="col bg-adjacent-subcategory-title">
+                <h6 class="text-center bg-adjacentsecurityproviders py-2 my-0">
+                          Adjacent security solutions
+                        </h6>
+
+                        <h6 class="text-center py-2 bg-adjacent-subcategory-title my-0 sm-text">
+                          API Testing
+                        </h6>
+                        <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
+                          <HomepageSubcategory
+                            subcategoryName="Vulnerability management"
+                            handleCompany={handleEntity}
+                            filteredCategory={
+                              AdjacentSecuritySolutionsANDApiTesting
+                            }
+                          />
+                        </div>
+
+                        <h6 class="text-center py-2 bg-adjacent-subcategory-title text-black my-0 sm-text">
+                        API Analytics/Monitoring
+                      </h6>
+                      <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
+                        {data <= 0 && <Loader />}
+                        <HomepageSubcategory
+                          subcategoryName="Web Application Firewalls with API security capabilities"
+                          handleCompany={handleEntity}
+                          filteredCategory={
+                            AdjacentSecuritySolutionsANDAPIAnalyticsMonitoring
+                          }
+                        />
+                      </div>
+
+                      <h6 class="text-center py-2 bg-adjacent-subcategory-title text-black my-0 sm-text">
+                        Access and Identity Management
+                      </h6>
+                      <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
+                        {data <= 0 && <Loader />}
+                        <HomepageSubcategory
+                          subcategoryName="Web Application Firewalls with API security capabilities"
+                          handleCompany={handleEntity}
+                          filteredCategory={AdjacentSecuritySolutionsANDAccess}
+                        />
+                      </div>
+                </div>
+              </div>
+            </div>
+
+            {/* END MOBILE */}
+
+            <div className="container-fluid d-none d-md-block">
               <div className="row">
                 <div className="col-md-12">
                   <div className="grid-container-top">
                     <div className="col11"></div>
                     <div className="col22">
-                      <div class="secturity-category-title">
+                      <div class="secturity-category-title d-none d-md-block">
                         <h6 class="text-center bg-apisecuritypureplay py-2  mb-1 text-black">
                           API Security Pureplay
                         </h6>
@@ -490,33 +631,34 @@ export default function Homepage({ data }) {
                   </div>
                   <div class="grid-container">
                     <div class="col1 bg-embedded-subcategory-title" id="">
-                    <div >
-                      <div class="secturity-category-title">
-                        <h6 class="text-center bg-embeddedapisecurity py-2 text-white my-0 ">
-                          Embedded API security
-                        </h6>
-                      </div>
-                      <div class="security-col-1-main">
-                        <h6 class="text-center py-2 bg-embedded-subcategory-title text-black my-0 sm-text">
-                          API Management/API Gateways
-                        </h6>
-                        <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
-                          {data <= 0 && <Loader />}
-                          <HomepageSubcategory
-                            subcategoryName="API Management/API Gateway"
-                            handleCompany={handleEntity}
-                            filteredCategory={EmbeddedAPISecurityANDManagement}
-                          />
+                      <div>
+                        <div class="secturity-category-title">
+                          <h6 class="text-center bg-embeddedapisecurity py-2 text-white my-0 ">
+                            Embedded API security
+                          </h6>
                         </div>
-                      </div>
+                        <div class="security-col-1-main">
+                          <h6 class="text-center py-2 bg-embedded-subcategory-title text-black my-0 sm-text">
+                            API Management/API Gateways
+                          </h6>
+                          <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
+                            {data <= 0 && <Loader />}
+                            <HomepageSubcategory
+                              subcategoryName="API Management/API Gateway"
+                              handleCompany={handleEntity}
+                              filteredCategory={
+                                EmbeddedAPISecurityANDManagement
+                              }
+                            />
+                          </div>
+                        </div>
                       </div>
                     </div>
 
                     <div class="col2 " id="">
                       <div class="security-col2-main-container bg-apipureplay-subcategory-title ">
                         <div class="security-col2-1   boder-r-col2">
-        
-                          <h6 class="text-center sm-text py-2 bg-apipureplay-subcategory-title  my-0">
+                          <h6 class="text-center sm-text py-2   my-0">
                             API Discovery and Risk management
                           </h6>
                           <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-0 p-1">
@@ -531,7 +673,7 @@ export default function Homepage({ data }) {
                         </div>
 
                         <div class="security-col2-2 boder-r-col2">
-                          <h6 class="text-center sm-text py-2  bg-apipureplay-subcategory-title my-0">
+                          <h6 class="text-center sm-text py-2   my-0">
                             API Threat Management
                           </h6>
 
@@ -544,7 +686,7 @@ export default function Homepage({ data }) {
                           </div>
                         </div>
                         <div class="security-col2-3 ">
-                          <h6 class="text-center py-2  bg-apipureplay-subcategory-title my-0 sm-text">
+                          <h6 class="text-center py-2   my-0 sm-text">
                             Vulnerability management
                           </h6>
 
@@ -584,57 +726,59 @@ export default function Homepage({ data }) {
 
                   <div class="grid-container-main-bottom my-0">
                     <div class="col5 bg-embedded-subcategory-title">
-                    <h6 class="text-center py-2 bg-embedded-subcategory-title text-black my-0 sm-text">
-                    Web Application Firewalls with API security capabilities
-                        </h6>
-                        <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
-                          {data <= 0 && <Loader />}
-                          <HomepageSubcategory
-                            subcategoryName="Web Application Firewalls with API security capabilities"
-                            handleCompany={handleEntity}
-                            filteredCategory={EmbeddedAPISecurityANDWeb}
-                          />
-                        </div>
+                      <h6 class="text-center py-2 bg-embedded-subcategory-title text-black my-0 sm-text">
+                        Web Application Firewalls <br /> with API security
+                        capabilities
+                      </h6>
+                      <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
+                        {data <= 0 && <Loader />}
+                        <HomepageSubcategory
+                          subcategoryName="Web Application Firewalls with API security capabilities"
+                          handleCompany={handleEntity}
+                          filteredCategory={EmbeddedAPISecurityANDWeb}
+                        />
+                      </div>
                     </div>
                     <div class="col6 bg-embedded-subcategory-title">
-                    <h6 class="text-center py-2 bg-embedded-subcategory-title text-black my-0 sm-text">
-                    Vulnerability identification/scanners
-                        </h6>
-                        <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
-                          {data <= 0 && <Loader />}
-                          <HomepageSubcategory
-                            subcategoryName="Web Application Firewalls with API security capabilities"
-                            handleCompany={handleEntity}
-                            filteredCategory={EmbeddedAPISecurityANDVulnerability}
-                          />
-                        </div>
+                      <h6 class="text-center py-2 bg-embedded-subcategory-title text-black my-0 sm-text">
+                        Vulnerability identification/scanners
+                      </h6>
+                      <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
+                        {data <= 0 && <Loader />}
+                        <HomepageSubcategory
+                          subcategoryName="Web Application Firewalls with API security capabilities"
+                          handleCompany={handleEntity}
+                          filteredCategory={EmbeddedAPISecurityANDVulnerability}
+                        />
+                      </div>
                     </div>
                     <div class="col7 bg-adjacent-subcategory-title">
-                    <h6 class="text-center py-2 bg-adjacent-subcategory-title text-black my-0 sm-text">
-                    API Analytics/Monitoring
-                        </h6>
-                        <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
-                          {data <= 0 && <Loader />}
-                          <HomepageSubcategory
-                            subcategoryName="Web Application Firewalls with API security capabilities"
-                            handleCompany={handleEntity}
-                            filteredCategory={AdjacentSecuritySolutionsANDAPIAnalyticsMonitoring}
-                          />
-                        </div>
+                      <h6 class="text-center py-2 bg-adjacent-subcategory-title text-black my-0 sm-text">
+                        API Analytics/Monitoring
+                      </h6>
+                      <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
+                        {data <= 0 && <Loader />}
+                        <HomepageSubcategory
+                          subcategoryName="Web Application Firewalls with API security capabilities"
+                          handleCompany={handleEntity}
+                          filteredCategory={
+                            AdjacentSecuritySolutionsANDAPIAnalyticsMonitoring
+                          }
+                        />
+                      </div>
                     </div>
                     <div class="col8 bg-adjacent-subcategory-title">
-                    <h6 class="text-center py-2 bg-adjacent-subcategory-title text-black my-0 sm-text">
-                    Access and Identity Management
-                        </h6>
-                        <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
-                          {data <= 0 && <Loader />}
-                          <HomepageSubcategory
-                            subcategoryName="Web Application Firewalls with API security capabilities"
-                            handleCompany={handleEntity}
-                            filteredCategory={AdjacentSecuritySolutionsANDAccess}
-                          />
-                        </div>
-                    
+                      <h6 class="text-center py-2 bg-adjacent-subcategory-title text-black my-0 sm-text">
+                        Access and Identity Management
+                      </h6>
+                      <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
+                        {data <= 0 && <Loader />}
+                        <HomepageSubcategory
+                          subcategoryName="Web Application Firewalls with API security capabilities"
+                          handleCompany={handleEntity}
+                          filteredCategory={AdjacentSecuritySolutionsANDAccess}
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -646,86 +790,93 @@ export default function Homepage({ data }) {
             <div className="container-fluid mb-5">
               <div className="row">
                 <div className="col-md-12">
-                <h6 class="text-center py-2 bg-adjacent-subcategory-title text-white bg-black my-0 ">
-                API tooling to support security actions
-                        </h6>
+                  <h6 class="text-center py-2 bg-adjacent-subcategory-title text-white bg-black my-0 ">
+                    API tooling to support security actions
+                  </h6>
 
                   <div className="security-container-bottom">
-                    
                     <div className="security-bottom bg-api-tooling-subcat-title">
-                          <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
-                    Data
-                        </h6>
-                        <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
-                          {data <= 0 && <Loader />}
-                          <HomepageSubcategory
-                            subcategoryName="Data"
-                            handleCompany={handleEntity}
-                            filteredCategory={APItoolingToSupportSecurityActionsANDData}
-                          />
-                        </div>
+                      <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
+                        Data
+                      </h6>
+                      <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
+                        {data <= 0 && <Loader />}
+                        <HomepageSubcategory
+                          subcategoryName="Data"
+                          handleCompany={handleEntity}
+                          filteredCategory={
+                            APItoolingToSupportSecurityActionsANDData
+                          }
+                        />
+                      </div>
                     </div>
                     <div className="security-bottom bg-api-tooling-subcat-title">
-                    <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
-                    Data governance/Data management
-                        </h6>
-                        <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
-                          {data <= 0 && <Loader />}
-                          <HomepageSubcategory
-                            subcategoryName="Data Governance"
-                            handleCompany={handleEntity}
-                            filteredCategory={APItoolingToSupportSecurityActionsANDDataGovernance}
-                          />
-                        </div>
+                      <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
+                        Data governance/Data management
+                      </h6>
+                      <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
+                        {data <= 0 && <Loader />}
+                        <HomepageSubcategory
+                          subcategoryName="Data Governance"
+                          handleCompany={handleEntity}
+                          filteredCategory={
+                            APItoolingToSupportSecurityActionsANDDataGovernance
+                          }
+                        />
+                      </div>
                     </div>
                     <div className="security-bottom bg-api-tooling-subcat-title">
-                    <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
-                    Legal
-                        </h6>
-                        <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
-                          {data <= 0 && <Loader />}
-                          <HomepageSubcategory
-                            subcategoryName="Legal"
-                            handleCompany={handleEntity}
-                            filteredCategory={APItoolingToSupportSecurityActionsANDLegal}
-                          />
-                        </div>
+                      <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
+                        Legal
+                      </h6>
+                      <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
+                        {data <= 0 && <Loader />}
+                        <HomepageSubcategory
+                          subcategoryName="Legal"
+                          handleCompany={handleEntity}
+                          filteredCategory={
+                            APItoolingToSupportSecurityActionsANDLegal
+                          }
+                        />
                       </div>
+                    </div>
                     <div className="security-bottom bg-api-tooling-subcat-title">
-                    <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
-                    Identity verification/KYC
-                        </h6>
-                        <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
-                          {data <= 0 && <Loader />}
-                          <HomepageSubcategory
-                            subcategoryName="Legal"
-                            handleCompany={handleEntity}
-                            filteredCategory={APItoolingToSupportSecurityActionsANDIdentity}
-                          />
-                        </div>
+                      <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
+                        Identity verification/KYC
+                      </h6>
+                      <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
+                        {data <= 0 && <Loader />}
+                        <HomepageSubcategory
+                          subcategoryName="Legal"
+                          handleCompany={handleEntity}
+                          filteredCategory={
+                            APItoolingToSupportSecurityActionsANDIdentity
+                          }
+                        />
                       </div>
+                    </div>
                     <div className="security-bottom bg-api-tooling-subcat-title">
-                    <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
-                    API Consulting
-                        </h6>
-                        <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
-                          {data <= 0 && <Loader />}
-                          <HomepageSubcategory
-                            subcategoryName="Legal"
-                            handleCompany={handleEntity}
-                            filteredCategory={APItoolingToSupportSecurityActionsANDApiConsulting}
-                          />
-                        </div>
+                      <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
+                        API Consulting
+                      </h6>
+                      <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
+                        {data <= 0 && <Loader />}
+                        <HomepageSubcategory
+                          subcategoryName="Legal"
+                          handleCompany={handleEntity}
+                          filteredCategory={
+                            APItoolingToSupportSecurityActionsANDApiConsulting
+                          }
+                        />
                       </div>
-                    
                     </div>
                   </div>
-              
+                </div>
               </div>
             </div>
           </section>
 
-          <section className="something-to-change py-5 bg-white border-top">
+          <section className="something-to-change pt-0 pb-5 bg-white border-top">
             <div className="container">
               <h3 className="text-center fw-bold my-5 text-company-color">
                 See something you want to change?

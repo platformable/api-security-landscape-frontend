@@ -3,17 +3,6 @@ export const categories = [
   "API Security Pureplay",
   "API tooling to support security actions",
   "Embedded API security",
-
-
-
-  "API Security Pureplay",
-  "API Security Support Tools",
-  "API Lifecycle Platform",
-  "API Standards/Protocols",
-  "Business processes as an API/API-as a Product",
-  "Media/Associations",
-  "Vertical API Abstractions",
-  "Backend Building Tools"
 ];
 
 export const subcategories = [
@@ -32,34 +21,6 @@ export const subcategories = [
   "API Management/API Gateways",
   "Web Application Firewalls with API security capabilities",
   "Vulnerability identification/scanners",
-
-
-  "OWASP 1",
-  "OWASP 2",
-  "OWASP 3",
-  "OWASP 4",
-  "OWASP 5",
-  "OWASP 6",
-  "OWASP 7",
-  "OWASP 8",
-  "OWASP 9",
-  "OWASP 10",
-  "Vulnerability scanners",
-  "API Testing",
-  "API Management/API Gateway",
-  "Access and Identity Management",
-  "API Analytics/Monitoring",
-  "API Consulting",
-  "API Standards",
-  "API Protocols",
-  "Identity verification/KYC",
-  "Data governance/Data management",
-  "Legal/Regulatory",
-  "Data",
-  "Media",
-  "Associations",
-  "Login",
-  "API Deployment/Back-end Building",
 ];
 
 export const categoriesWithSubcategories = [
