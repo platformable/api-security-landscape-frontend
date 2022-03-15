@@ -655,8 +655,8 @@ export default function Homepage({ data }) {
                       </div>
                     </div>
 
-                    <div class="col2 " id="">
-                      <div class="security-col2-main-container bg-apipureplay-subcategory-title ">
+                    <div class="col2" id="">
+                      <div class="security-col2-main-container bg-apipureplay-subcategory-title">
                         <div class="security-col2-1   boder-r-col2">
                           <h6 class="text-center sm-text py-2   my-0">
                             API Discovery and Risk management
@@ -701,6 +701,7 @@ export default function Homepage({ data }) {
                           </div>
                         </div>
                       </div>
+                      
                     </div>
 
                     <div class="col3 bg-adjacent-subcategory-title" id="">
@@ -883,7 +884,7 @@ export default function Homepage({ data }) {
               </h3>
               <div className="something-to-change-container">
                 <div className="change-box text-center px-5">
-                  <div className="d-flex justify-content-center mb-2">
+                  <div className="d-flex justify-content-center mb-2 change-img-box">
                     <img
                       src="../about-btn1.png"
                       alt=""
@@ -891,7 +892,7 @@ export default function Homepage({ data }) {
                     />
                   </div>
                   <button
-                    className="btn-about bg-company-color text-white mt-3"
+                    className="btn-about bg-company-color text-white mt-2"
                     onClick={() =>
                       handleForm("https://airtable.com/shr07pWSbRnQfnZZd")
                     }
@@ -901,20 +902,22 @@ export default function Homepage({ data }) {
                 </div>
 
                 <div className="change-box  px-5">
-                  <div className="d-flex">
+                  <div className="d-flex ">
+                    <div className="change-img-box">
                     <img
                       src="../about-btn2.png"
                       alt=""
                       className="align-self-start mb-3 me-3 xd-icon"
                     />
-                    <p className="pt-1 text-company-color">
+                    </div>
+                    <p className="pt-1 text-company-color ">
                       Report a bug including problems with the website or with
                       the data for a specific tool provider
                     </p>
                   </div>
-                  <div className="text-center d-flex flex-grow-1">
+                  <div className="text-center d-flex flex-grow-1 btn-report-bug">
                     <button
-                      className="btn-about bg-company-color text-white"
+                      className="btn-about bg-company-color text-white mt-3"
                       onClick={() =>
                         handleForm(
                           "https://platformable.typeform.com/to/iqJrv9LJ"
@@ -928,19 +931,22 @@ export default function Homepage({ data }) {
 
                 <div className="change-box  px-5">
                   <div className="d-flex">
-                    <img
+                  <div className="change-img-box">
+                  <img
                       src="../about-btn3.png"
                       alt=""
                       className="align-self-start mb-3 me-3 xd-icon"
                     />
-                    <p className="pt-1 text-company-color">
+                </div>
+                    
+                    <p className="pt-1 text-company-color ">
                       Share a new feature idea, including any additional data
                       points you would like to see{" "}
                     </p>
                   </div>
                   <div className="text-center d-flex flex-grow-1">
                     <button
-                      className="btn-about bg-company-color text-white mt-2"
+                      className="btn-about bg-company-color text-white mt-3"
                       onClick={() =>
                         handleForm(
                           "https://platformable.typeform.com/to/hSprzih3"

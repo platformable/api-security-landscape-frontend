@@ -1176,7 +1176,10 @@ border-radius:10px;
 }
 
 
-
+.change-img-box {
+  min-height:120px;
+  
+  }
 
 /* NEW LAYOUT */
 
@@ -1364,6 +1367,7 @@ border-top:1px solid #5A0C78;
 
 .security-col2-main-container {
   min-height: 300px;
+
   }
   
   .security-col2-1 {

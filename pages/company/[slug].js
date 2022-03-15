@@ -280,9 +280,29 @@ console.log("selectedCompany: ",selectedCompany)
                 {subcategory?.split(",").map((subcat,index)=>{
   
               return <span className={`test text-center badge mb-1 mt-1 text-black d-block
-              ${subcat==="API Management/API Gateways" && "bg-danger"}
-              ${subcat.includes("Web Application Firewalls with API security capabilities")&& "bg-embedded-subcategory-label"}
-              ${subcat==="Vulnerability identification/scanners" && "bg-danger"}`}>{subcat}</span>
+              ${subcat==="API Management/API Gateways" && "bg-embedded-subcategory-label"}
+              ${subcat==="Web Application Firewalls with API security capabilities" && "bg-embedded-subcategory-label"}
+              ${subcat==="Vulnerability identification/scanners" && "bg-embedded-subcategory-label"}
+
+              ${subcat==="API Discovery and Risk management" && "bg-apipureplay-subcategory-label"}
+              ${subcat==="API Threat Management" && "bg-apipureplay-subcategory-label"}
+              ${subcat==="Vulnerability management" && "bg-apipureplay-subcategory-label"}
+
+              ${subcat==="API Testing" && "bg-adjacent-subcategory-label"}
+              ${subcat==="API Analytics/Monitoring" && "bg-adjacent-subcategory-label"}
+              ${subcat==="Access and Identity Management" && "bg-adjacent-subcategory-label"}
+
+              ${subcat==="Data" && "bg-api-tooling-subcat-label"}
+              ${subcat==="Data governance/Data management" && "bg-api-tooling-subcat-label"}
+              ${subcat==="Legal" && "bg-api-tooling-subcat-label"}
+              ${subcat==="Identity verification/KYC" && "bg-api-tooling-subcat-label"}
+              ${subcat==="API Consulting" && "bg-api-tooling-subcat-label"}`}
+              
+              >
+            
+            {subcat}
+              
+              </span>
               })}  
 
         <div className="open-source d-flex justify-content-center">
