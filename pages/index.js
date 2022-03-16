@@ -917,7 +917,7 @@ export default function Homepage({ data }) {
                   </div>
                   <div className="text-center d-flex flex-grow-1 btn-report-bug">
                     <button
-                      className="btn-about bg-company-color text-white mt-3"
+                      className="btn-about bg-company-color text-white "
                       onClick={() =>
                         handleForm(
                           "https://platformable.typeform.com/to/iqJrv9LJ"
@@ -946,7 +946,7 @@ export default function Homepage({ data }) {
                   </div>
                   <div className="text-center d-flex flex-grow-1">
                     <button
-                      className="btn-about bg-company-color text-white mt-3"
+                      className="btn-about bg-company-color text-white "
                       onClick={() =>
                         handleForm(
                           "https://platformable.typeform.com/to/hSprzih3"
