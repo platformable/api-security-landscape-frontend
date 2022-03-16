@@ -877,32 +877,23 @@ export default function Homepage({ data }) {
             </div>
           </section>
 
-          <section className="something-to-change pt-0 pb-5 bg-white border-top">
-            <div className="container">
-              <h3 className="text-center fw-bold my-5 text-company-color">
-                See something you want to change?
-              </h3>
-              <div className="something-to-change-container">
-                <div className="change-box text-center px-5">
-                  <div className="d-flex justify-content-center mb-2 change-img-box">
+          <section className="something-to-change py-5 bg-white border-top">
+          <div className="container">
+                <h3 className="text-center fw-bold my-5 text-company-color">See something you want to change?</h3>
+                <div className="something-to-change-container">
+                    <div className="change-box text-center px-5">
+                    <div className="d-flex justify-content-center mb-2 change-img-box mt-1">
                     <img
                       src="../about-btn1.png"
                       alt=""
                       className="d-block align-self-start mb-2 xd-icon"
                     />
                   </div>
-                  <button
-                    className="btn-about bg-company-color text-white mt-2"
-                    onClick={() =>
-                      handleForm("https://airtable.com/shr07pWSbRnQfnZZd")
-                    }
-                  >
-                    Add your API tool
-                  </button>
-                </div>
+                    <button className="btn-about bg-company-color text-white mt-1" onClick={()=>handleForm("https://airtable.com/shr07pWSbRnQfnZZd")}>Add your API tool</button>
+                    </div>
 
-                <div className="change-box  px-5">
-                  <div className="d-flex ">
+                    <div className="change-box  px-5">
+                    <div className="d-flex">
                     <div className="change-img-box">
                     <img
                       src="../about-btn2.png"
@@ -910,55 +901,31 @@ export default function Homepage({ data }) {
                       className="align-self-start mb-3 me-3 xd-icon"
                     />
                     </div>
-                    <p className="pt-1 text-company-color ">
-                      Report a bug including problems with the website or with
-                      the data for a specific tool provider
-                    </p>
-                  </div>
-                  <div className="text-center d-flex flex-grow-1 btn-report-bug">
-                    <button
-                      className="btn-about bg-company-color text-white mt-3"
-                      onClick={() =>
-                        handleForm(
-                          "https://platformable.typeform.com/to/iqJrv9LJ"
-                        )
-                      }
-                    >
-                      Report a bug
-                    </button>
-                  </div>
-                </div>
+                    <p className="pt-1 text-company-color">Report a bug including problems with the website or with the data for a specific tool provider</p>
+                    </div>
+                    <div className="text-center d-flex flex-grow-1 mt-3">
+                    <button className="btn-about bg-company-color text-white" onClick={()=>handleForm("https://platformable.typeform.com/to/iqJrv9LJ")}>Report a bug</button>
+                    </div>
+                    </div>
 
-                <div className="change-box  px-5">
-                  <div className="d-flex">
-                  <div className="change-img-box">
+
+                    <div className="change-box  px-5">
+                    <div className="d-flex">
+                    <div className="change-img-box">
                   <img
                       src="../about-btn3.png"
                       alt=""
                       className="align-self-start mb-3 me-3 xd-icon"
                     />
                 </div>
-                    
-                    <p className="pt-1 text-company-color ">
-                      Share a new feature idea, including any additional data
-                      points you would like to see{" "}
-                    </p>
-                  </div>
-                  <div className="text-center d-flex flex-grow-1">
-                    <button
-                      className="btn-about bg-company-color text-white mt-3"
-                      onClick={() =>
-                        handleForm(
-                          "https://platformable.typeform.com/to/hSprzih3"
-                        )
-                      }
-                    >
-                      New feature idea
-                    </button>
-                  </div>
+                    <p className="pt-1 text-company-color">Share a new feature idea, including any additional data points you would like to see </p>
+                    </div>
+                    <div className="text-center d-flex flex-grow-1 mt-3">
+                    <button className="btn-about bg-company-color text-white" onClick={()=>handleForm("https://platformable.typeform.com/to/hSprzih3")}>New feature idea</button>
+                    </div>
+                    </div>
                 </div>
-              </div>
-            </div>
+                </div>
           </section>
         </main>
       </div>
