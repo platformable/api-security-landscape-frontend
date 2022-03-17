@@ -338,7 +338,7 @@ export default function Homepage({ data }) {
       {loading && <TopBarProgress />}
       <div className="">
         <Head>
-          <title>The Security Landscape</title>
+          <title>APISecure Landscape</title>
           <meta content="text/html; charset=UTF-8" name="Content-Type" />
           <meta name="description" content="The API Landscape" />
           <meta property="og:url" content="https://apilandscape.apiscene.io/" />
@@ -360,7 +360,7 @@ export default function Homepage({ data }) {
               {/* <Link className="navbar-brand" href="/"><img src="../homepage/logo_temporary_apilandscape.png" alt="apidays" className="home-logo align-self-start" /></Link> */}
               <div className="text-center flex-grow-1">
                 <h1 className="text-white text-center py-2 text-white fw-bold">
-                  API Secure Landscape
+                APISecure Landscape
                 </h1>
                 <p className="text-center sm-text text-white">
                   Last Update: {`${getDay()} ${getMonth()} ${getYear()}`}
