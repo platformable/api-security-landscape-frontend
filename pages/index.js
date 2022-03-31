@@ -57,7 +57,7 @@ export default function Homepage({ data }) {
     "Access and Identity Management",
     "API Discovery and Risk management",
     "API Threat Management",
-    "Vulnerability management",
+    "Vulnerability Management",
     "Data",
     "Data governance/Data management",
     "Legal/Regulatory",
@@ -128,23 +128,23 @@ export default function Homepage({ data }) {
   };
 
   const AdjacentSecuritySolutions = data.values.filter((company, index) =>
-    company?.parentCategorySlug?.includes("Adjacent security solutions")
+    company?.parentCategorySlug?.includes("Adjacent Security Solutions")
   );
 
   const AdjacentSecuritySolutionsANDApiTesting = data.values.filter(
     (company, index) =>
-      company?.parentCategorySlug?.includes("Adjacent security solutions") &&
+      company?.parentCategorySlug?.includes("Adjacent Security Solutions") &&
       company?.subcategory?.includes("API Testing")
   );
   const AdjacentSecuritySolutionsANDAPIAnalyticsMonitoring = data.values.filter(
     (company, index) =>
-      company?.parentCategorySlug?.includes("Adjacent security solutions") &&
+      company?.parentCategorySlug?.includes("Adjacent Security Solutions") &&
       company?.subcategory?.includes("API Analytics/Monitoring")
   );
 
   const AdjacentSecuritySolutionsANDAccess = data.values.filter(
     (company, index) =>
-      company?.parentCategorySlug?.includes("Adjacent security solutions") &&
+      company?.parentCategorySlug?.includes("Adjacent Security Solutions") &&
       company?.subcategory?.includes("Access and Identity Management")
   );
 
@@ -158,7 +158,7 @@ export default function Homepage({ data }) {
     .filter(
       (company, index) =>
         company?.parentCategorySlug?.includes("API Security Pureplay") &&
-        company?.subcategory?.includes("API Discovery and Risk management")
+        company?.subcategory?.includes("API Discovery and Risk Management")
     )
     .sort((a, b) => a.name.localeCompare(b.name));
 
@@ -174,7 +174,7 @@ export default function Homepage({ data }) {
     .filter(
       (company, index) =>
         company?.parentCategorySlug?.includes("API Security Pureplay") &&
-        company?.subcategory?.includes("Vulnerability management")
+        company?.subcategory?.includes("Vulnerability Management")
     )
     .sort((a, b) => a.name.localeCompare(b.name));
 
@@ -183,7 +183,7 @@ export default function Homepage({ data }) {
   const APItoolingToSupportSecurityActions = data.values.filter(
     (company, index) =>
       company?.parentCategorySlug?.includes(
-        "API tooling to support security actions"
+        "API Tooling to Support Security Actions"
       )
   );
 
@@ -191,7 +191,7 @@ export default function Homepage({ data }) {
     .filter(
       (company, index) =>
         company?.parentCategorySlug?.includes(
-          "API tooling to support security actions"
+          "API Tooling to Support Security Actions"
         ) && company?.subcategory?.includes("Data")
     )
     .sort((a, b) => a.name.localeCompare(b.name));
@@ -200,8 +200,8 @@ export default function Homepage({ data }) {
     .filter(
       (company, index) =>
         company?.parentCategorySlug?.includes(
-          "API tooling to support security actions"
-        ) && company?.subcategory?.includes("Data governance/Data management")
+          "API Tooling to Support Security Actions"
+        ) && company?.subcategory?.includes("Data Governance/Data Management")
     )
     .sort((a, b) => a.name.localeCompare(b.name));
 
@@ -209,7 +209,7 @@ export default function Homepage({ data }) {
     .filter(
       (company, index) =>
         company?.parentCategorySlug?.includes(
-          "API tooling to support security actions"
+          "API Tooling to Support Security Actions"
         ) && company?.subcategory?.includes("Legal/Regulatory")
     )
     .sort((a, b) => a.name.localeCompare(b.name));
@@ -218,7 +218,7 @@ export default function Homepage({ data }) {
     .filter(
       (company, index) =>
         company?.parentCategorySlug?.includes(
-          "API tooling to support security actions"
+          "API Tooling to Support Security Actions"
         ) && company?.subcategory?.includes("Login")
     )
     .sort((a, b) => a.name.localeCompare(b.name));
@@ -227,8 +227,8 @@ export default function Homepage({ data }) {
     .filter(
       (company, index) =>
         company?.parentCategorySlug?.includes(
-          "API tooling to support security actions"
-        ) && company?.subcategory?.includes("Identity verification/KYC")
+          "API Tooling to Support Security Actions"
+        ) && company?.subcategory?.includes("Identity Verification/KYC")
     )
     .sort((a, b) => a.name.localeCompare(b.name));
 
@@ -236,7 +236,7 @@ export default function Homepage({ data }) {
     .filter(
       (company, index) =>
         company?.parentCategorySlug?.includes(
-          "API tooling to support security actions"
+          "API Tooling to Support Security Actions"
         ) && company?.subcategory?.includes("API Consulting")
     )
     .sort((a, b) => a.name.localeCompare(b.name));
@@ -244,13 +244,13 @@ export default function Homepage({ data }) {
   //
 
   const EmbeddedAPISecurity = data.values.filter((company, index) =>
-    company?.parentCategorySlug?.includes("Embedded API security")
+    company?.parentCategorySlug?.includes("Embedded API Security")
   );
 
   const EmbeddedAPISecurityANDManagement = data.values
     .filter(
       (company, index) =>
-        company?.parentCategorySlug?.includes("Embedded API security") &&
+        company?.parentCategorySlug?.includes("Embedded API Security") &&
         company?.subcategory?.includes("API Management/API Gateways")
     )
     .sort((a, b) => a.name.localeCompare(b.name));
@@ -258,9 +258,9 @@ export default function Homepage({ data }) {
   const EmbeddedAPISecurityANDWeb = data.values
     .filter(
       (company, index) =>
-        company?.parentCategorySlug?.includes("Embedded API security") &&
+        company?.parentCategorySlug?.includes("Embedded API Security") &&
         company?.subcategory?.includes(
-          "Web Application Firewalls with API security capabilities"
+          "Web Application Firewalls with API Security Capabilities"
         )
     )
     .sort((a, b) => a.name.localeCompare(b.name));
@@ -268,8 +268,8 @@ export default function Homepage({ data }) {
   const EmbeddedAPISecurityANDVulnerability = data.values
     .filter(
       (company, index) =>
-        company?.parentCategorySlug?.includes("Embedded API security") &&
-        company?.subcategory?.includes("Vulnerability identification/scanners")
+        company?.parentCategorySlug?.includes("Embedded API Security") &&
+        company?.subcategory?.includes("Vulnerability Identification/scanners")
     )
     .sort((a, b) => a.name.localeCompare(b.name));
 
@@ -338,7 +338,7 @@ export default function Homepage({ data }) {
       {loading && <TopBarProgress />}
       <div className="">
         <Head>
-          <title>APISecure Landscape</title>
+          <title>API Security Landscape</title>
           <meta content="text/html; charset=UTF-8" name="Content-Type" />
           <meta name="description" content="The API Landscape" />
           <meta property="og:url" content="https://apilandscape.apiscene.io/" />
@@ -360,7 +360,7 @@ export default function Homepage({ data }) {
               {/* <Link className="navbar-brand" href="/"><img src="../homepage/logo_temporary_apilandscape.png" alt="apidays" className="home-logo align-self-start" /></Link> */}
               <div className="text-center flex-grow-1">
                 <h1 className="text-white text-center py-2 text-white fw-bold">
-                  APISecure Landscape
+                  API Security Landscape
                 </h1>
                 <p className="text-center sm-text text-white">
                   Last Update: {`${getDay()} ${getMonth()} ${getYear()}`}
@@ -428,21 +428,22 @@ export default function Homepage({ data }) {
                   Share
                 </h3>
                 <LinkedinShareButton
-                  url="https://apilandscape.platformable.com/"
-                  title="The API Landscape"
-                  source="https://apilandscape.platformable.com/"
-                  summary="The API Landscape"
+                  url="https://apisecurity.platformable.com/"
+                  title="The API Security"
+                  source="https://apisecurity.platformable.com/"
+                  summary="The API Security"
                 >
                   <LinkedinIcon size={32} round={true} />
-                </LinkedinShareButton>
+                </LinkedinShareButton> {' '}
                 <TwitterShareButton
-                  title="The API Landscape"
-                  url="https://apilandscape.platformable.com"
+                  title="The API Security"
+                  url="https://apisecurity.platformable.com/"
                   via="http://apidays.global"
-                  hashtags={["api", "landscape"]}
+                  hashtags={["api", "landscape", "security" ,"apidays"]}
                 >
                   <TwitterIcon size={32} round={true} />
                 </TwitterShareButton>
+                {' '}
                 <EmailShareButton
                   url=""
                   title="The API Landscape"
@@ -510,12 +511,12 @@ export default function Homepage({ data }) {
                     </div>
 
                     <h6 class="text-center py-2   my-0 sm-text">
-                      Vulnerability management
+                      Vulnerability Management
                     </h6>
 
                     <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1 ">
                       <HomepageSubcategory
-                        subcategoryName="Vulnerability management"
+                        subcategoryName="Vulnerability Management"
                         handleCompany={handleEntity}
                         filteredCategory={apiSecurityPureplayANDVulnerability}
                       />
@@ -576,7 +577,7 @@ export default function Homepage({ data }) {
                         </h6>
                         <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
                           <HomepageSubcategory
-                            subcategoryName="Vulnerability management"
+                            subcategoryName="Vulnerability Management"
                             handleCompany={handleEntity}
                             filteredCategory={
                               AdjacentSecuritySolutionsANDApiTesting
@@ -634,7 +635,7 @@ export default function Homepage({ data }) {
                       <div>
                         <div class="secturity-category-title">
                           <h6 class="text-center bg-embeddedapisecurity py-2 text-white my-0 ">
-                            Embedded API security ({EmbeddedAPISecurity.length})
+                            Embedded API Security ({EmbeddedAPISecurity.length})
                           </h6>
                         </div>
                         <div class="security-col-1-main">
@@ -659,7 +660,7 @@ export default function Homepage({ data }) {
                       <div class="security-col2-main-container bg-apipureplay-subcategory-title">
                         <div class="security-col2-1   boder-r-col2">
                           <h6 class="text-center sm-text py-2   my-0">
-                            API Discovery and Risk management ({apiSecurityPureplayANDDiscovery.length})
+                            API Discovery And Risk Management ({apiSecurityPureplayANDDiscovery.length})
                           </h6>
                           <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-0 p-1">
                             {data <= 0 && <Loader />}
@@ -687,12 +688,12 @@ export default function Homepage({ data }) {
                         </div>
                         <div class="security-col2-3 ">
                           <h6 class="text-center py-2   my-0 sm-text">
-                            Vulnerability management ({apiSecurityPureplayANDVulnerability.length})
+                            Vulnerability Management ({apiSecurityPureplayANDVulnerability.length})
                           </h6>
 
                           <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
                             <HomepageSubcategory
-                              subcategoryName="Vulnerability management"
+                              subcategoryName="Vulnerability Management"
                               handleCompany={handleEntity}
                               filteredCategory={
                                 apiSecurityPureplayANDVulnerability
@@ -707,14 +708,14 @@ export default function Homepage({ data }) {
                     <div class="col3 bg-adjacent-subcategory-title" id="">
                       <div class="secturity-category-title">
                         <h6 class="text-center bg-adjacentsecurityproviders py-2 my-0">
-                          Adjacent security solutions ({AdjacentSecuritySolutions.length})
+                          Adjacent Security Solutions ({AdjacentSecuritySolutions.length})
                         </h6>
                         <h6 class="text-center py-2 bg-adjacent-subcategory-title my-0 sm-text">
                           API Testing ({AdjacentSecuritySolutionsANDApiTesting.length})
                         </h6>
                         <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
                           <HomepageSubcategory
-                            subcategoryName="Vulnerability management"
+                            subcategoryName="Vulnerability Management"
                             handleCompany={handleEntity}
                             filteredCategory={
                               AdjacentSecuritySolutionsANDApiTesting
@@ -728,8 +729,8 @@ export default function Homepage({ data }) {
                   <div class="grid-container-main-bottom my-0">
                     <div class="col5 bg-embedded-subcategory-title">
                       <h6 class="text-center py-2 bg-embedded-subcategory-title text-black my-0 sm-text">
-                        Web Application Firewalls <br /> with API security
-                        capabilities ({EmbeddedAPISecurityANDWeb.length})
+                        Web Application Firewalls <br /> With API Security
+                        Capabilities ({EmbeddedAPISecurityANDWeb.length})
                       </h6>
                       <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
                         {data <= 0 && <Loader />}
@@ -742,7 +743,7 @@ export default function Homepage({ data }) {
                     </div>
                     <div class="col6 bg-embedded-subcategory-title">
                       <h6 class="text-center py-2 bg-embedded-subcategory-title text-black my-0 sm-text">
-                        Vulnerability identification/scanners ({EmbeddedAPISecurityANDVulnerability.length})
+                        Vulnerability Identification/Scanners ({EmbeddedAPISecurityANDVulnerability.length})
                       </h6>
                       <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
                         {data <= 0 && <Loader />}
@@ -770,7 +771,7 @@ export default function Homepage({ data }) {
                     </div>
                     <div class="col8 bg-adjacent-subcategory-title">
                       <h6 class="text-center py-2 bg-adjacent-subcategory-title text-black my-0 sm-text">
-                        Access and Identity Management ({AdjacentSecuritySolutionsANDAccess.length})
+                        Access And Identity Management ({AdjacentSecuritySolutionsANDAccess.length})
                       </h6>
                       <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
                         {data <= 0 && <Loader />}
@@ -792,7 +793,7 @@ export default function Homepage({ data }) {
               <div className="row">
                 <div className="col-md-12">
                   <h6 class="text-center py-2 bg-adjacent-subcategory-title text-white bg-black my-0 ">
-                    API tooling to support security actions ({APItoolingToSupportSecurityActions.length})
+                    API Tooling to Support Security Actions ({APItoolingToSupportSecurityActions.length})
                   </h6>
 
                   <div className="security-container-bottom">
@@ -813,7 +814,7 @@ export default function Homepage({ data }) {
                     </div>
                     <div className="security-bottom bg-api-tooling-subcat-title">
                       <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
-                        Data governance/Data management ({APItoolingToSupportSecurityActionsANDDataGovernance.length})
+                        Data Governance/Data Management ({APItoolingToSupportSecurityActionsANDDataGovernance.length})
                       </h6>
                       <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
                         {data <= 0 && <Loader />}
@@ -843,7 +844,7 @@ export default function Homepage({ data }) {
                     </div>
                     <div className="security-bottom bg-api-tooling-subcat-title">
                       <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
-                        Identity verification/KYC ({APItoolingToSupportSecurityActionsANDIdentity.length})
+                        Identity Verification/KYC ({APItoolingToSupportSecurityActionsANDIdentity.length})
                       </h6>
                       <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
                         {data <= 0 && <Loader />}
@@ -877,9 +878,9 @@ export default function Homepage({ data }) {
             </div>
           </section>
 
-          <section className="methodology py-5 ">
+          <section className="methodology pt-1 pb-5 ">
                 <div className="container">
-                    <div className="methodology-title d-flex justify-content-center align-items-center my-5">
+                    <div className="methodology-title d-flex justify-content-center align-items-center mb-5">
                         <img src="../methodology_icon.png" alt="" className=" mx-2 xd-icon" />
                    
                         <h3 className="fw-bold text-center mx-2 text-white">Methodology</h3>
@@ -957,7 +958,7 @@ export default function Homepage({ data }) {
                     <p className="pt-1 text-company-color">Report a bug including problems with the website or with the data for a specific tool provider</p>
                     </div>
                     <div className="text-center d-flex flex-grow-1 mt-3">
-                    <button className="btn-about bg-company-color text-white" onClick={()=>handleForm("https://platformable.typeform.com/to/iqJrv9LJ")}>Report a bug</button>
+                    <button className="btn-about bg-company-color text-white" onClick={()=>handleForm("https://platformable.typeform.com/to/F3QNwwnS")}>Report a bug</button>
                     </div>
                     </div>
 
@@ -974,7 +975,7 @@ export default function Homepage({ data }) {
                     <p className="pt-1 text-company-color">Share a new feature idea, including any additional data points you would like to see </p>
                     </div>
                     <div className="text-center d-flex flex-grow-1 mt-3">
-                    <button className="btn-about bg-company-color text-white" onClick={()=>handleForm("https://platformable.typeform.com/to/hSprzih3")}>New feature idea</button>
+                    <button className="btn-about bg-company-color text-white" onClick={()=>handleForm("https://platformable.typeform.com/to/HTxJ8MDM")}>New feature idea</button>
                     </div>
                     </div>
                 </div>
