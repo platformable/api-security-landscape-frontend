@@ -240,9 +240,10 @@ console.log("selectedCompany: ",selectedCompany)
                   <a href={url} target="_blank">
                     {logo === "" || null ? (
                       <img
-                        src={`../../../apidaysReplacementLogo.png`}
+                        src={`https://res.cloudinary.com/platformable/image/upload/v1648805011/apilandscape/GitHub-Logo_g5x9hs.png`}
                         alt=""
                         className=""
+                        width={120}
                       />
                     ) : (
                       <img
@@ -1004,7 +1005,7 @@ console.log("selectedCompany: ",selectedCompany)
           
            <div className="company-logo d-flex justify-content-center align-items-center my-2">
            <a href={url} target="_blank">
-           {logo === "" || null ? <img src={`../../../apidaysReplacementLogo.png`} alt=""  className=""/> : <img srcset={`${handleImages(logo)} 2x`} alt="" className="img-fluid" /> }
+           {logo === "" || null ? <img src={`https://res.cloudinary.com/platformable/image/upload/v1648805011/apilandscape/GitHub-Logo_g5x9hs.png`} alt=""  className="" width={120}/> : <img srcset={`${handleImages(logo)} 2x`} alt="" className="img-fluid" /> }
            </a>
            </div> {/* company logo */}
            <div className="company-name">
