@@ -796,8 +796,8 @@ export default function Homepage({ data }) {
                     API Tooling to Support Security Actions ({APItoolingToSupportSecurityActions.length})
                   </h6>
 
-                  <div className="security-container-bottom">
-                    <div className="security-bottom bg-api-tooling-subcat-title">
+                  <div className="security-bottom">
+                  <div className="security-bottom bg-api-tooling-subcat-title">
                       <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
                         Data ({APItoolingToSupportSecurityActionsANDData.length})
                       </h6>
@@ -812,6 +812,41 @@ export default function Homepage({ data }) {
                         />
                       </div>
                     </div>
+                  </div>
+
+                  <div className="security-bottom bg-api-tooling-subcat-title">
+                  <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
+                        API Consulting ({APItoolingToSupportSecurityActionsANDApiConsulting.length})
+                      </h6>
+                      <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
+                        {data <= 0 && <Loader />}
+                        <HomepageSubcategory
+                          subcategoryName="Legal"
+                          handleCompany={handleEntity}
+                          filteredCategory={
+                            APItoolingToSupportSecurityActionsANDApiConsulting
+                          }
+                        />
+                      </div>
+
+                  </div>
+
+                  <div className="security-container-bottom">
+                    {/* <div className="security-bottom bg-api-tooling-subcat-title">
+                      <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
+                        Data ({APItoolingToSupportSecurityActionsANDData.length})
+                      </h6>
+                      <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
+                        {data <= 0 && <Loader />}
+                        <HomepageSubcategory
+                          subcategoryName="Data"
+                          handleCompany={handleEntity}
+                          filteredCategory={
+                            APItoolingToSupportSecurityActionsANDData
+                          }
+                        />
+                      </div>
+                    </div> */}
                     <div className="security-bottom bg-api-tooling-subcat-title">
                       <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
                         Data Governance/Data Management ({APItoolingToSupportSecurityActionsANDDataGovernance.length})
@@ -857,7 +892,7 @@ export default function Homepage({ data }) {
                         />
                       </div>
                     </div>
-                    <div className="security-bottom bg-api-tooling-subcat-title">
+                   {/*  <div className="security-bottom bg-api-tooling-subcat-title">
                       <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
                         API Consulting ({APItoolingToSupportSecurityActionsANDApiConsulting.length})
                       </h6>
@@ -871,7 +906,7 @@ export default function Homepage({ data }) {
                           }
                         />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
