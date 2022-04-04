@@ -19,7 +19,15 @@ import {
   TwitterIcon,
 } from "react-share";
 
+import {subcategoriesDescriptions} from '../utils/categoriesAndSubcategories'
+
+
 export default function Homepage({ data }) {
+
+
+
+
+
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [company, setCompany] = useContext(CompanyContext);
@@ -295,43 +303,18 @@ export default function Homepage({ data }) {
     router.push(`/${url}`);
   };
 
-  const APILifecyclePlatformsDescription =
-    "Essential tools to manage the API lifecycle: from design to testing, and including access and identity, security, analytics, and developer portals. Also includes consulting companies that assist API providers define API strategies and build APIs, and the infrastructure needed to enable event-driven architectures including IoT platforms.";
-  const BackendBuildingToolsDescription =
-    "Serverless, cloud, mobile-based and blockchain backend infrastructure and cloud-based API infrastructures. Also includes headless CMS and backend infrastructure built specifically for the banking/finance/insurance industry.";
-  const BusinessprocessesasanAPIAPIasaProductDescription =
-    "API products specifically available to be used as service components that enable business processes and functionalities to be composed into IT architectures. Includes the use of data as a service, payments, communication platforms, identity verification, and so on.";
-  const integrationPlatformDescription =
-    "API aggregators and automation/orchestration services that help create workflows and standardised integrations to facilitate use of APIs in internal IT architectures. Platforms that provide a single point of integration for APIs that have different value propositions.";
-  const verticalApiDescription =
-    "Platforms that take a value proposition from one use case, such as cloud storage, and abstracts all available APIs into one API.";
+  const adjacentDescription = 'API lifecycle and management tooling that enable some security features, particularly to ensure zero-trust security or shift-left practices'
+  const apipureplayDescription = 'Products and tooling focused on addressing core API security concerns including API discovery and threat, vulnerability and risk management'
+const apitoolingDescription = 'API lifecycle, management, and design tooling and API products that help support greater visibility on security management'
+const embeddedDescription = 'Broad API management, application software, and API lifecycle tooling that include enhanced security features to enable some DevSecOps oversight'  
 
-  const totalValues = data.values.filter(
+
+const totalValues = data.values.filter(
     (items) =>
       items.parentCategorySlug !== "API Standards/Protocols" &&
       items.parentCategorySlug !== "Media/Associations"
   );
 
-  /*   const [searchResult,setSearchResult]=useState(false) */
-
-  /*   const handleSearchMessage=()=>{
-    setSearchResult(true)
-    setTimeout(()=>setSearchResult(false),3000)
-  }
-
-  const handleFoundCompany = (company)=>{
-    setLoading(!loading)
-    router.push(`/company/${company}`)
-  } */
-
-  /* const handleSearch = ()=>{
-
-    if(company.searchInput!==""){
-    
-   const result =  data.values.filter((item, index) => item.name.toLowerCase()===company.searchInput);
-   result.length===0 ? handleSearchMessage() :handleFoundCompany(result[0].name);
-  } 
-  } */
 
   return (
     <Layout>
@@ -340,12 +323,12 @@ export default function Homepage({ data }) {
         <Head>
           <title>API Security Landscape</title>
           <meta content="text/html; charset=UTF-8" name="Content-Type" />
-          <meta name="description" content="The API Landscape" />
-          <meta property="og:url" content="https://apilandscape.apiscene.io/" />
+          <meta name="description" content="The API Security Landscape" />
+          <meta property="og:url" content="https://apisecure.co/ " />
           <meta property="og:type" content="website" />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta property="og:description" content="The API Landscape" />
-          <meta property="og:title" content="The API Landscape" />
+          <meta property="og:description" content="The APISecure Landscape" />
+          <meta property="og:title" content="The API Security Landscape" />
           <meta property="og:image" content="../landscape_social_map.png" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@APIdaysGlobal" />
@@ -395,27 +378,7 @@ export default function Homepage({ data }) {
                 >
                   Zoom
                 </button>
-                {/* <a className="btn btn-dark-gray  text-white" href="https://drive.google.com/u/0/uc?id=1J2DdAB54QU6QuPoACqQoNv4nImFjyAdx&export=download"  download="stateofthemarket2022">Report</a> */}
-                {/* <a
-                  className="btn btn-dark-gray  text-white"
-                  href="https://apidays.typeform.com/to/YMTfJ3"
-                  target="_blank"
-                >
-                  Report
-                </a> */}
 
-                
-                {/*      <div className="row">
-            <div className="col-md-4"> </div>
-              <div className="col-md-4">
-              <div class="input-group my-3">
-                <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="button-addon2" value={company.inputSearch} onChange={(e)=>setCompany({...company,searchInput:e.target.value})}/>
-                <button class="btn btn-dark-gray text-white" type="button" id="button-addon2" onClick={()=>handleSearch(company.searchInput)}>search</button>
-              </div>
-               {searchResult && <div className="text-center"><span className="text-center sm-text text-white">Company not found</span></div>}
-              </div>
-              <div className="col-md-4"></div>              
-            </div> */}
               </div>
 
               <div className="mt-5">
@@ -429,7 +392,7 @@ export default function Homepage({ data }) {
                 </h3>
                 <LinkedinShareButton
                   url="https://apisecurity.platformable.com/"
-                  title="The API Security"
+                  title="The API Security Landscape"
                   source="https://apisecurity.platformable.com/"
                   summary="The API Security"
                 >
@@ -438,7 +401,7 @@ export default function Homepage({ data }) {
                 <TwitterShareButton
                   title="The API Security"
                   url="https://apisecurity.platformable.com/"
-                  via="http://apidays.global"
+                  via="https://apisecure.co/"
                   hashtags={["api", "landscape", "security" ,"apidays"]}
                 >
                   <TwitterIcon size={32} round={true} />
@@ -446,10 +409,10 @@ export default function Homepage({ data }) {
                 {' '}
                 <EmailShareButton
                   url=""
-                  title="The API Landscape"
-                  subject="The API Landscape from apidays"
+                  title="The API Security Landscape"
+                  subject="The API Security Landscape from apisecure"
                   separator=" "
-                  body="Get to know more about the API Landscape, visit http://apilandscape.com"
+                  body="Get to know more about the API Security Landscape, visit https://apisecure.co/"
                 >
                   <EmailIcon size={32} round={true} />
                 </EmailShareButton>
@@ -623,7 +586,7 @@ export default function Homepage({ data }) {
                     <div className="col11"></div>
                     <div className="col22">
                       <div class="secturity-category-title d-none d-md-block">
-                        <h6 class="text-center bg-apisecuritypureplay py-2  mb-1 text-black">
+                        <h6 class="text-center bg-apisecuritypureplay py-2  mb-1 text-black" data-tip={apipureplayDescription} data-for="category-tooltip">
                           API Security Pureplay ({apiSecurityPureplay.length})
                         </h6>
                       </div>
@@ -634,12 +597,14 @@ export default function Homepage({ data }) {
                     <div class="col1 bg-embedded-subcategory-title" id="">
                       <div>
                         <div class="secturity-category-title">
-                          <h6 class="text-center bg-embeddedapisecurity py-2 text-white my-0 ">
+                          <h6 class="text-center bg-embeddedapisecurity py-2 text-white my-0 " data-tip={embeddedDescription} data-for="category-tooltip">
                             Embedded API Security ({EmbeddedAPISecurity.length})
                           </h6>
                         </div>
                         <div class="security-col-1-main">
-                          <h6 class="text-center py-2 bg-embedded-subcategory-title text-black my-0 sm-text">
+                          <h6 class="text-center py-2 bg-embedded-subcategory-title text-black my-0 sm-text" 
+                          data-tip={subcategoriesDescriptions['API Testing'][0].description} data-for="subcategory-tooltip"
+                          >
                             API Management/API Gateways ({EmbeddedAPISecurityANDManagement.length})
                           </h6>
                           <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
@@ -659,7 +624,9 @@ export default function Homepage({ data }) {
                     <div class="col2" id="">
                       <div class="security-col2-main-container bg-apipureplay-subcategory-title">
                         <div class="security-col2-1   boder-r-col2">
-                          <h6 class="text-center sm-text py-2   my-0">
+                          <h6 class="text-center sm-text py-2   my-0"
+                          data-tip={subcategoriesDescriptions['API Discovery and Risk management'][0].description} data-for="subcategory-tooltip"
+                          >
                             API Discovery And Risk Management ({apiSecurityPureplayANDDiscovery.length})
                           </h6>
                           <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-0 p-1">
@@ -674,7 +641,9 @@ export default function Homepage({ data }) {
                         </div>
 
                         <div class="security-col2-2 boder-r-col2">
-                          <h6 class="text-center sm-text py-2   my-0">
+                          <h6 class="text-center sm-text py-2   my-0"
+                          data-tip={subcategoriesDescriptions['API Threat Management'][0].description} data-for="subcategory-tooltip"
+                          >
                             API Threat Management ({apiSecurityPureplayANDApiThreat.length})
                           </h6>
 
@@ -687,7 +656,9 @@ export default function Homepage({ data }) {
                           </div>
                         </div>
                         <div class="security-col2-3 ">
-                          <h6 class="text-center py-2   my-0 sm-text">
+                          <h6 class="text-center py-2   my-0 sm-text"
+                          data-tip={subcategoriesDescriptions['Vulnerability management'][0].description} data-for="subcategory-tooltip"
+                          >
                             Vulnerability Management ({apiSecurityPureplayANDVulnerability.length})
                           </h6>
 
@@ -707,10 +678,11 @@ export default function Homepage({ data }) {
 
                     <div class="col3 bg-adjacent-subcategory-title" id="">
                       <div class="secturity-category-title">
-                        <h6 class="text-center bg-adjacentsecurityproviders py-2 my-0">
+                        <h6 class="text-center bg-adjacentsecurityproviders py-2 my-0" data-tip={adjacentDescription} data-for="category-tooltip">
                           Adjacent Security Solutions ({AdjacentSecuritySolutions.length})
                         </h6>
-                        <h6 class="text-center py-2 bg-adjacent-subcategory-title my-0 sm-text">
+                        <h6 class="text-center py-2 bg-adjacent-subcategory-title my-0 sm-text"
+                        data-tip={subcategoriesDescriptions['API Testing'][0].description} data-for="subcategory-tooltip">
                           API Testing ({AdjacentSecuritySolutionsANDApiTesting.length})
                         </h6>
                         <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
@@ -728,7 +700,9 @@ export default function Homepage({ data }) {
 
                   <div class="grid-container-main-bottom my-0">
                     <div class="col5 bg-embedded-subcategory-title">
-                      <h6 class="text-center py-2 bg-embedded-subcategory-title text-black my-0 sm-text">
+                      <h6 class="text-center py-2 bg-embedded-subcategory-title text-black my-0 sm-text"
+                      data-tip={subcategoriesDescriptions['Web Application Firewalls with API security capabilities'][0].description} data-for="subcategory-tooltip"
+                      >
                         Web Application Firewalls <br /> With API Security
                         Capabilities ({EmbeddedAPISecurityANDWeb.length})
                       </h6>
@@ -742,7 +716,9 @@ export default function Homepage({ data }) {
                       </div>
                     </div>
                     <div class="col6 bg-embedded-subcategory-title">
-                      <h6 class="text-center py-2 bg-embedded-subcategory-title text-black my-0 sm-text">
+                      <h6 class="text-center py-2 bg-embedded-subcategory-title text-black my-0 sm-text"
+                      data-tip={subcategoriesDescriptions['Vulnerability identification/scanners'][0].description} data-for="subcategory-tooltip"
+                      >
                         Vulnerability Identification/Scanners ({EmbeddedAPISecurityANDVulnerability.length})
                       </h6>
                       <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
@@ -755,7 +731,9 @@ export default function Homepage({ data }) {
                       </div>
                     </div>
                     <div class="col7 bg-adjacent-subcategory-title">
-                      <h6 class="text-center py-2 bg-adjacent-subcategory-title text-black my-0 sm-text">
+                      <h6 class="text-center py-2 bg-adjacent-subcategory-title text-black my-0 sm-text"
+                      data-tip={subcategoriesDescriptions['API Analytics/Monitoring'][0].description} data-for="subcategory-tooltip"
+                      >
                         API Analytics/Monitoring ({AdjacentSecuritySolutionsANDAPIAnalyticsMonitoring.length})
                       </h6>
                       <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
@@ -770,7 +748,9 @@ export default function Homepage({ data }) {
                       </div>
                     </div>
                     <div class="col8 bg-adjacent-subcategory-title">
-                      <h6 class="text-center py-2 bg-adjacent-subcategory-title text-black my-0 sm-text">
+                      <h6 class="text-center py-2 bg-adjacent-subcategory-title text-black my-0 sm-text"
+                      data-tip={subcategoriesDescriptions['Access and Identity Management'][0].description} data-for="subcategory-tooltip"
+                      >
                         Access And Identity Management ({AdjacentSecuritySolutionsANDAccess.length})
                       </h6>
                       <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
@@ -792,13 +772,15 @@ export default function Homepage({ data }) {
             <div className="container-fluid mb-5">
               <div className="row">
                 <div className="col-md-12">
-                  <h6 class="text-center py-2 bg-adjacent-subcategory-title text-white bg-black my-0 ">
+                  <h6 class="text-center py-2 bg-adjacent-subcategory-title text-white bg-black my-0 " data-tip={apitoolingDescription} data-for="category-tooltip">
                     API Tooling to Support Security Actions ({APItoolingToSupportSecurityActions.length})
                   </h6>
 
                   <div className="security-bottom">
                   <div className="security-bottom bg-api-tooling-subcat-title">
-                      <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
+                      <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text"
+                      data-tip={subcategoriesDescriptions['Data'][0].description} data-for="subcategory-tooltip"
+                      >
                         Data ({APItoolingToSupportSecurityActionsANDData.length})
                       </h6>
                       <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
@@ -815,7 +797,8 @@ export default function Homepage({ data }) {
                   </div>
 
                   <div className="security-bottom bg-api-tooling-subcat-title">
-                  <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
+                  <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text"
+                  data-tip={subcategoriesDescriptions['API Consulting'][0].description} data-for="subcategory-tooltip">
                         API Consulting ({APItoolingToSupportSecurityActionsANDApiConsulting.length})
                       </h6>
                       <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
@@ -848,7 +831,9 @@ export default function Homepage({ data }) {
                       </div>
                     </div> */}
                     <div className="security-bottom bg-api-tooling-subcat-title">
-                      <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
+                      <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text"
+                      data-tip={subcategoriesDescriptions['Data governance/Data management'][0].description} data-for="subcategory-tooltip"
+                      >
                         Data Governance/Data Management ({APItoolingToSupportSecurityActionsANDDataGovernance.length})
                       </h6>
                       <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
@@ -863,7 +848,9 @@ export default function Homepage({ data }) {
                       </div>
                     </div>
                     <div className="security-bottom bg-api-tooling-subcat-title">
-                      <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
+                      <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text"
+                      data-tip={subcategoriesDescriptions['Legal/Regulatory'][0].description} data-for="subcategory-tooltip"
+                      >
                         Legal ({APItoolingToSupportSecurityActionsANDLegal.length})
                       </h6>
                       <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
@@ -878,7 +865,9 @@ export default function Homepage({ data }) {
                       </div>
                     </div>
                     <div className="security-bottom bg-api-tooling-subcat-title">
-                      <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text">
+                      <h6 class="text-center py-2 bg-api-tooling-subcat-title text-black my-0 sm-text"
+                      data-tip={subcategoriesDescriptions['Identity verification/KYC'][0].description} data-for="subcategory-tooltip"
+                      >
                         Identity Verification/KYC ({APItoolingToSupportSecurityActionsANDIdentity.length})
                       </h6>
                       <div class="security-subcategory-container d-flex flex-wrap justify-content-between my-1 p-1">
