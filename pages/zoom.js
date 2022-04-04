@@ -603,7 +603,7 @@ const totalValues = data.values.filter(
                         </div>
                         <div class="security-col-1-main">
                           <h6 class="text-center py-2 bg-embedded-subcategory-title text-black my-0 sm-text" 
-                          data-tip={subcategoriesDescriptions['API Testing'][0].description} data-for="subcategory-tooltip"
+                          data-tip={subcategoriesDescriptions['API Management/API Gateways'][0].description} data-for="subcategory-tooltip"
                           >
                             API Management/API Gateways ({EmbeddedAPISecurityANDManagement.length})
                           </h6>
