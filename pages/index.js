@@ -360,18 +360,18 @@ const totalValues = data.values.filter(
                   Add your API Tool
                 </button> 
                 <button
-                  className="btn bg-white  me-2 text-company-color "
+                  className="btn bg-white  text-company-color "
                   onClick={() => handleLinks("companies")}
                 >
                   Search
                 </button>
-              {/*   <a
-                  className="btn btn-dark-gray me-1 text-white"
-                  href="../apilandscape.png"
-                  download="apilandscape"
+                <a
+                  className="btn bg-white me-1 text-company-color "
+                  href="../apisecuritylandscape.png"
+                  download="apisecuritylandscape"
                 >
                   Download the map
-                </a> */}
+                </a>
                 <button
                   className="btn bg-white   text-company-color "
                   onClick={() => handleLinks("zoom")}
@@ -399,7 +399,7 @@ const totalValues = data.values.filter(
                   <LinkedinIcon size={32} round={true} />
                 </LinkedinShareButton> {' '}
                 <TwitterShareButton
-                  title="The API Security"
+                  title="The API Security Landscape"
                   url="https://apisecurity.platformable.com/"
                   via="https://apisecure.co/"
                   hashtags={["api", "landscape", "security" ,"apidays"]}
